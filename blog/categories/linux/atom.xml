@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | My Octopress Blog]]></title>
+  <link href="http://dyurk.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://dyurk.github.io/"/>
+  <updated>2013-12-21T16:49:44-05:00</updated>
+  <id>http://dyurk.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <updated>2013-03-26T13:35:01-04:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
+
+<pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
+Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
+</pre>
+
+
+<p>Delete all ContentPermission entries from the XML file &ndash; this will remove all unnecessary/unsupported classes and will allow the import to continue. Open the zip file and edit entities.xml</p>
+
+<br>
+
+
+<p>Search for <code><object class="ContentPermission"...>.</code> You will see <code><object></code> entries like this:</p>
+
+<pre class="prettyprint">
+
+237081 <object class="ContentPermission" package="com.atlassian.confluence.security">
+237082 <id name="id">17072133</id>
+237083 <property name="type">&lt;![CDATA[View]]&gt;</property>
+237084 <property name="userName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237085 <property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
+237086 </property>
+237087 <property name="creatorName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237088 <property name="creationDate">2011-05-19 10:22:05.000</property>
+237089 <property name="lastModifierName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237090 <property name="lastModificationDate">2011-05-19 10:22:05.000</property>
+237091 </object>
+
+</pre>
+
+
+<p>Helpful on-liner to remove the entries from entities.xml</p>
+
+<pre><code>sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml</code></pre>
+
+
+<p>Make sure there are no syntax errors that will cause the import to fail</p>
+
+<pre><code>xmllint --noout entities.xml</code></pre>
+
+
+<p>Retry the import and Good Luck!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Redirect All HTTP Request to HTTPS]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https/"/>
+    <updated>2013-03-13T13:57:54-04:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https</id>
+    <content type="html"><![CDATA[<pre class="prettyprint">
+<VirtualHost *:80>
+       ServerAlias *
+       RewriteEngine On
+       RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
+</VirtualHost>
+</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <updated>2013-02-20T21:26:26-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
+
+<pre># puppet agent --disable "Reason why disabled"</pre>
+
+
+<p>To make sure it&rsquo;s disable, just do a Puppet run;</p>
+
+<pre># puppet agent -t
+ Notice: Skipping run of Puppet configuration client; administratively disabled (Reason: 'Testing some new things');
+ Use 'puppet agent --enable' to re-enable.</pre>
+
+
+<p>To enable:</p>
+
+<pre>puppet agent --enable</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Confluence Backup Errors]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors/"/>
+    <updated>2013-02-20T15:17:32-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors</id>
+    <content type="html"><![CDATA[<pre>The following error(s) occurred:
+com.atlassian.confluence.importexport.ImportExportException: Couldn't backup database data. at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEntities(AbstractXmlExporter.java:197) at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEverything(AbstractXmlExporter.java:99) at com.atlassian.confluence.importexport.impl.FileXmlExporter.backupEverything(FileXmlExporter.java:76)</pre>
+
+
+<p>Java is running out of memory.</p>
+
+<p>To increase heap or perm gen space memory in Linux installations,</p>
+
+<p>Edit $CONFLUENCE_HOME/bin/setenv.sh</p>
+
+<p>Find the section JAVA_OPTS=&ldquo;-Xms256m -Xmx512m -XX:MaxPermSize=256m and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <updated>2013-02-08T17:16:13-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
+
+<p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
+
+<pre>tar -xzvf ./git-1.8.x.tar.gz</pre>
+
+
+<pre>cd ./git-1.8.x</pre>
+
+
+<pre id="crayon-51152fba206b0-5">./configure</pre>
+
+
+<pre id="crayon-51152fba206b0-6">make &amp;&amp; make install</pre>
+
+]]></content>
+  </entry>
+  
+</feed>

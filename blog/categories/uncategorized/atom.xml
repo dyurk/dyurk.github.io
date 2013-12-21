@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Uncategorized | My Octopress Blog]]></title>
+  <link href="http://dyurk.github.io/blog/categories/uncategorized/atom.xml" rel="self"/>
+  <link href="http://dyurk.github.io/"/>
+  <updated>2013-12-21T16:49:44-05:00</updated>
+  <id>http://dyurk.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
+    <updated>2013-02-20T22:08:22-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
+    <content type="html"><![CDATA[<p>The server&rsquo;s default <a href="http://dev.mysql.com/doc/refman/5.5/en//server-system-variables.html#sysvar_max_allowed_packet"><code>max_allowed_packet</code></a> value is 1MB and it looks like it has exceeded the default max. You can increase this if the server needs to handle big queries. This can be done in two ways:</p>
+
+<p>Start MySQL client with the following option (64 MB for this example)</p>
+
+<pre><code>mysql --max_allowed_packet=64M </code></pre>
+
+
+<p>or Add the following in your my.cnf file</p>
+
+<pre><code>max_allowed_packet=64M</code></pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <updated>2013-02-08T17:16:13-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
+
+<p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
+
+<pre>tar -xzvf ./git-1.8.x.tar.gz</pre>
+
+
+<pre>cd ./git-1.8.x</pre>
+
+
+<pre id="crayon-51152fba206b0-5">./configure</pre>
+
+
+<pre id="crayon-51152fba206b0-6">make &amp;&amp; make install</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Su Apache: "This Account Is Currently Not Available"]]></title>
+    <link href="http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available/"/>
+    <updated>2012-09-11T16:04:27-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available</id>
+    <content type="html"><![CDATA[<p>When trying to switch user to apache and you get the following: "This account is currently not available". You need to set a shell for the apache user. Let&rsquo;s say we want to use bash.</p>
+
+<pre># chsh -s /bin/bash apache
+
+</pre>
+
+
+<p>You should get this prompt:</p>
+
+<pre>Changing shell for apache.
+Shell changed.</pre>
+
+
+<p>Done! Now you should be able to su as apache.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Chmod Directories and Files Separately]]></title>
+    <link href="http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files/"/>
+    <updated>2012-07-10T01:28:42-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files</id>
+    <content type="html"><![CDATA[<p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
+
+<p>For Directories:</p>
+
+<pre lang="shell" prompt="$">find . -type d -exec chmod -v 775 {} \;</pre>
+
+
+<p>For Files:</p>
+
+<pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu Apps Open Folders Instead of Documents Fix]]></title>
+    <link href="http://dyurk.github.io/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/"/>
+    <updated>2012-06-22T17:10:14-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix</id>
+    <content type="html"><![CDATA[<p>Recently after trying out Xfce I started to have issues with one of my go-to apps, Gnome Do. It would only open the directory of the file that i was trying to open. This also happen with Chrome, were downloaded files would not open, only their directory. The issue seems to be releated to some of the utilities that come with Xfec. This should do it:</p>
+
+<pre lang="shell" prompt="$">sudo apt-get remove exo-utils</pre>
+
+]]></content>
+  </entry>
+  
+</feed>

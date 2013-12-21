@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | My Octopress Blog]]></title>
+  <link href="http://dyurk.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://dyurk.github.io/"/>
+  <updated>2013-12-21T16:49:44-05:00</updated>
+  <id>http://dyurk.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <updated>2013-02-08T17:16:13-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
+
+<p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
+
+<pre>tar -xzvf ./git-1.8.x.tar.gz</pre>
+
+
+<pre>cd ./git-1.8.x</pre>
+
+
+<pre id="crayon-51152fba206b0-5">./configure</pre>
+
+
+<pre id="crayon-51152fba206b0-6">make &amp;&amp; make install</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Restored a Cleared Git Stash]]></title>
+    <link href="http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash/"/>
+    <updated>2012-10-05T14:33:35-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash</id>
+    <content type="html"><![CDATA[<p>Run the following:</p>
+
+<pre>git fsck --lost-found</pre>
+
+
+<p>You will get something similar to this:</p>
+
+<pre>Checking objects: 100% (6596/6596), done.
+dangling commit e3b3b973asdasdasdasdasd7cqweqwe35f6d34e</pre>
+
+
+<p>Now just apply the stash&rsquo;s SHA1:</p>
+
+<pre>git stash apply e3b3b973asdasdasdasdasd7cqweqwe35f6d34e</pre>
+
+]]></content>
+  </entry>
+  
+</feed>

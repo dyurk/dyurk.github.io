@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web Operations | My Octopress Blog]]></title>
+  <link href="http://dyurk.github.io/blog/categories/web-operations/atom.xml" rel="self"/>
+  <link href="http://dyurk.github.io/"/>
+  <updated>2013-12-21T16:49:44-05:00</updated>
+  <id>http://dyurk.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <updated>2013-03-26T13:35:01-04:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
+
+<pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
+Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
+</pre>
+
+
+<p>Delete all ContentPermission entries from the XML file &ndash; this will remove all unnecessary/unsupported classes and will allow the import to continue. Open the zip file and edit entities.xml</p>
+
+<br>
+
+
+<p>Search for <code><object class="ContentPermission"...>.</code> You will see <code><object></code> entries like this:</p>
+
+<pre class="prettyprint">
+
+237081 <object class="ContentPermission" package="com.atlassian.confluence.security">
+237082 <id name="id">17072133</id>
+237083 <property name="type">&lt;![CDATA[View]]&gt;</property>
+237084 <property name="userName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237085 <property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
+237086 </property>
+237087 <property name="creatorName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237088 <property name="creationDate">2011-05-19 10:22:05.000</property>
+237089 <property name="lastModifierName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+237090 <property name="lastModificationDate">2011-05-19 10:22:05.000</property>
+237091 </object>
+
+</pre>
+
+
+<p>Helpful on-liner to remove the entries from entities.xml</p>
+
+<pre><code>sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml</code></pre>
+
+
+<p>Make sure there are no syntax errors that will cause the import to fail</p>
+
+<pre><code>xmllint --noout entities.xml</code></pre>
+
+
+<p>Retry the import and Good Luck!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Redirect All HTTP Request to HTTPS]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https/"/>
+    <updated>2013-03-13T13:57:54-04:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https</id>
+    <content type="html"><![CDATA[<pre class="prettyprint">
+<VirtualHost *:80>
+       ServerAlias *
+       RewriteEngine On
+       RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
+</VirtualHost>
+</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apache Proxy Example]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/12/apache-proxy-example/"/>
+    <updated>2013-03-12T16:58:56-04:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/12/apache-proxy-example</id>
+    <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
+
+<pre class="prettyprint">
+<VirtualHost *:80>
+        ServerName myapp.website.com
+        ProxyRequests Off
+
+        <Proxy *>
+                Order deny,allow
+                Allow from all
+        </Proxy>
+
+                # Logging
+        LogFormat "%h %l %u %t \"%r\" %>s %b" common
+        CustomLog logs/access_log common
+
+
+        ProxyTimeout    7200
+        ProxyPreserveHost On
+        ProxyPass           /       http://localhost:7990/
+        ProxyPassReverse    /       http://localhost:7990/
+        ProxyTimeout     86400
+
+</VirtualHost>
+
+</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cisco Catalyst 2960 - Notes]]></title>
+    <link href="http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
+    <updated>2013-03-06T03:07:46-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes</id>
+    <content type="html"><![CDATA[<h2>VLAN</h2>
+
+
+<h3>Creating VLANs</h3>
+
+
+<p>Show all VLANs on switch</p>
+
+<pre>&gt; sh vlan</pre>
+
+
+<p>Now, Let&rsquo;s begin. Enter global configuration mode</p>
+
+<pre># config t</pre>
+
+
+<p>Enter a VLAN ID</p>
+
+<pre># vlan 5</pre>
+
+
+<p>Provide a name for the VLAN</p>
+
+<pre># name myvlan</pre>
+
+
+<p>Exit config</p>
+
+<pre># end</pre>
+
+
+<h3>Assigning Ports to a VLAN</h3>
+
+
+<p>Enter global configuration mode</p>
+
+<pre># config t</pre>
+
+
+<p>Select the interface (port). Naming convention: Switch# / Port</p>
+
+<p>e.g Switch 1 port 19</p>
+
+<pre># interface Gi1/0/19</pre>
+
+
+<p>Define the VLAN membership mode for the port (Layer 2 access port).</p>
+
+<pre># switchport mode access</pre>
+
+
+<p>Assign the port to a VLAN</p>
+
+<pre># switchport access vlan 5</pre>
+
+
+<p>Exit config</p>
+
+<pre># end</pre>
+
+
+<h2><a id="more"></a><a id="more-694"></a></h2>
+
+
+<h2>Back up and Restore Configuration Files</h2>
+
+
+<h3>TFTP Back up</h3>
+
+
+<p>To back up the current configuration, enter Privilege Mode then type the following:</p>
+
+<pre>#copy running-config tftp:</pre>
+
+
+<p>You will then be prompt to provided the address of the tftp server &amp; the filename. Here is an example:</p>
+
+<pre>Address or name of remote host []? 102.10.15.44
+ Destination filename [mco-confg]? name_of_config_file
+ !!
+ 1030 bytes copied in 2.489 secs (395 bytes/sec)</pre>
+
+
+<h3>TFTP Restore</h3>
+
+
+<p>To restore a configuration from a tftp server, first enter Privilege Mode then type the following:</p>
+
+<pre>#copy tftp: running-config</pre>
+
+
+<p>You will then be prompt to provided the address of the tftp server &amp; the filename. Here is an example:</p>
+
+<pre>Address or name of remote host []? 102.10.15.44
+ Source filename []? backup_cfg_for_my_router
+ Destination filename [running-config]?
+ Accessing tftp://102.10.15.1/backup_cfg_for_my_router...
+ Loading backup_cfg_for_router from 102.10.15.44 (via FastEthernet0/0): !
+ [OK - 1030 bytes]</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
+    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <updated>2013-02-20T21:26:26-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
+
+<pre># puppet agent --disable "Reason why disabled"</pre>
+
+
+<p>To make sure it&rsquo;s disable, just do a Puppet run;</p>
+
+<pre># puppet agent -t
+ Notice: Skipping run of Puppet configuration client; administratively disabled (Reason: 'Testing some new things');
+ Use 'puppet agent --enable' to re-enable.</pre>
+
+
+<p>To enable:</p>
+
+<pre>puppet agent --enable</pre>
+
+]]></content>
+  </entry>
+  
+</feed>

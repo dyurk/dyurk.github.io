@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | My Octopress Blog]]></title>
+  <link href="http://dyurk.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://dyurk.github.io/"/>
+  <updated>2013-12-21T16:49:44-05:00</updated>
+  <id>http://dyurk.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Force OTA Update Check on T-mobile G2]]></title>
+    <link href="http://dyurk.github.io/blog/2011/05/13/force-ota-update-check-on-t-mobile-g2/"/>
+    <updated>2011-05-13T16:38:18-04:00</updated>
+    <id>http://dyurk.github.io/blog/2011/05/13/force-ota-update-check-on-t-mobile-g2</id>
+    <content type="html"><![CDATA[<p>To force OTA update checking on the T-mobile G2 type the following in the dialer:</p>
+
+<blockquote><strong>*#*#checkin#*#*</strong></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wipe Dalvik Cache in Terminal, Andriod.]]></title>
+    <link href="http://dyurk.github.io/blog/2011/05/13/wipe-dalvik-cache-in-terminal-andriod/"/>
+    <updated>2011-05-13T16:33:54-04:00</updated>
+    <id>http://dyurk.github.io/blog/2011/05/13/wipe-dalvik-cache-in-terminal-andriod</id>
+    <content type="html"><![CDATA[<p><em><em>Root Required</em></em></p>
+
+<p>Open your Terminal of choice and type the following.</p>
+
+<pre>$su
+#cd /system/sd/dalvik-cache
+#rm *
+#exit
+$exit</pre>
+
+
+<p>Reboot phone.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Delete a Single Iptables Rule - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="This will list all of your rules, plus their chain name and number: iptables -vnL --line-numbers Example: 10 14 898 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://dyurk.github.io/blog/2012/06/07/delete-a-single-iptables">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:dyurk.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Delete a Single Iptables Rule</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-07T13:00:44-04:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This will list all of your rules, plus their chain name and number:</p>
+
+<pre lang="shell" prompt="$">iptables -vnL --line-numbers</pre>
+
+
+<p>Example:</p>
+
+<pre>10 14 898 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:139 
+11 54 3200 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:445 
+12 0 0 ACCEPT udp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW udp dpt:137 
+13 0 0 ACCEPT udp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW udp dpt:138 
+14 4 240 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:22 
+15 2344 325K REJECT all -- * * 0.0.0.0/0 0.0.0.0/0 reject-with icmp-host-prohibited</pre>
+
+
+<p>Let&rsquo;s say I want to remove the reject all rule, which is number 15.</p>
+
+<pre lang="shell" prompt="$">iptables -D INPUT 15</pre>
+
+
+<p>Now it&rsquo;s gone.</p>
+
+<pre>10 14 898 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:139 
+11 54 3200 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:445 
+12 0 0 ACCEPT udp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW udp dpt:137 
+13 0 0 ACCEPT udp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW udp dpt:138 
+14 4 240 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:22</pre>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">David Yurkiewicz</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-07T13:00:44-04:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dyurk.github.io/blog/2012/06/07/delete-a-single-iptables/" data-via="" data-counturl="http://dyurk.github.io/blog/2012/06/07/delete-a-single-iptables/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/" title="Previous Post: WUSB54G Windows 7 64-bit Driver workaround">&laquo; WUSB54G Windows 7 64-bit Driver workaround</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/06/14/history-command-timestam/" title="Next Post: history command with date and timestamp">history command with date and timestamp &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/26/confluence-xml-import-issues/">Confluence XML Import Issues</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
