@@ -20,7 +20,7 @@ comments: []
 ---
 Apache proxy example for web app running on myapp.website.com on port 7990.
 
-<pre class="prettyprint">
+```
 <VirtualHost *:80>
         ServerName myapp.website.com
         ProxyRequests Off
@@ -43,4 +43,4 @@ Apache proxy example for web app running on myapp.website.com on port 7990.
 
 </VirtualHost>
 
-</pre>
+```

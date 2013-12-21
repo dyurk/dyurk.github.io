@@ -19,4 +19,5 @@ tags:
 comments: []
 ---
 To force OTA update checking on the T-mobile G2 type the following in the dialer:
-<blockquote><strong>*#*#checkin#*#*</strong></blockquote>
+
+<strong>*#*#checkin#*#*</strong>

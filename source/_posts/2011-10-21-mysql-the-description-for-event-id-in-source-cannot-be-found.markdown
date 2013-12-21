@@ -38,7 +38,7 @@ It seems like the local computer may not have the necessary registry information
 </ul>
 <div>
 
-[caption id="attachment_375" align="aligncenter" width="581" caption="mysqld.exe XN Resource Editor"]<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png"><img class="size-full wp-image-375" title="mysqld.exe XN Resource Editor" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png" alt="mysqld.exe XN Resource Editor" width="581" height="493" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png"><img class="size-full wp-image-375" title="mysqld.exe XN Resource Editor" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png" alt="mysqld.exe XN Resource Editor" width="581" height="493" /></a>
 
 &nbsp;
 
@@ -48,25 +48,17 @@ It seems like the local computer may not have the necessary registry information
 </ul>
 <div>
 
-[caption id="attachment_378" align="aligncenter" width="320" caption="Resource Properties"]<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png"><img class="size-full wp-image-378" title="Resource Properties" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png" alt="Resource Properties" width="320" height="161" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png"><img class="size-full wp-image-378" title="Resource Properties" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png" alt="Resource Properties" width="320" height="161" /></a>
 
 </div>
 &nbsp;
-<ul>
-	<li>From the menu select <strong>Strings, </strong>and then <strong>Add String. </strong>It will create a default string with a 00000001 id.</li>
-</ul>
-<ul>
-	<li>Opinally add the following string :</li>
-</ul>
-<pre style="text-align: center;"><span style="font-family: Consolas, Monaco, monospace;"><span class="Apple-style-span" style="font-size: 12px; line-height: 18px; white-space: pre;"><span class="wp-caption">%1For more information, see Help and Support Center at http://www.mysql.com.</span> </span></span></pre>
-<ul>
-	<li style="text-align: left;">Change the ID from '00000001' to:
-<pre class="wp-caption"> 'C0000064'</pre>
-</li>
-</ul>
-<ul>
-	<li>Now Save and exit. Start MySql server now.</li>
-</ul>
+From the menu select <strong>Strings, </strong>and then <strong>Add String. </strong>It will create a default string with a 00000001 id.
+
+Change the ID from '00000001' to:
+<pre> 'C0000064'</pre>
+
+Now Save and exit. Start MySql server now.
+
 <div>That should do it. From now on you should see all the actual event messages in the Event Viewer.</div>
 <div>Source: <a href="http://bugs.mysql.com/bug.php?id=48042">http://bugs.mysql.com/bug.php?id=48042</a></div>
 <div></div>

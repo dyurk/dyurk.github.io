@@ -26,4 +26,4 @@ To increase heap or perm gen space memory in Linux installations,
 
 Edit $CONFLUENCE_HOME/bin/setenv.sh
 
-Find the section JAVA_OPTS="-Xms256m -Xmx512m -XX:MaxPermSize=256m and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.
+Find the section `JAVA_OPTS="-Xms256m -Xmx512m -XX:MaxPermSize=256m` and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.

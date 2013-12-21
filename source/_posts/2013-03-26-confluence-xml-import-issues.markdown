@@ -23,33 +23,36 @@ comments: []
 Find the class that the import is having issues with. For this example ContentPermission is the problem.
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-</pre>
+Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet</pre>
+
 Delete all ContentPermission entries from the XML file - this will remove all unnecessary/unsupported classes and will allow the import to continue. Open the zip file and edit entities.xml
 <br>
-Search for <code><object class="ContentPermission"...>.</code> You will see <code><object></code> entries like this:
 
-<pre class="prettyprint">
+Search for `<object class="ContentPermission"...>` You will see `<object>` entries like this:
 
-237081 <object class="ContentPermission" package="com.atlassian.confluence.security">
-237082 <id name="id">17072133</id>
-237083 <property name="type"><![CDATA[View]]></property>
-237084 <property name="userName"><![CDATA[corporatetrainer]]></property>
-237085 <property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
-237086 </property>
-237087 <property name="creatorName"><![CDATA[corporatetrainer]]></property>
-237088 <property name="creationDate">2011-05-19 10:22:05.000</property>
-237089 <property name="lastModifierName"><![CDATA[corporatetrainer]]></property>
-237090 <property name="lastModificationDate">2011-05-19 10:22:05.000</property>
-237091 </object>
 
-</pre>
+```xml
+<object class="ContentPermission" package="com.atlassian.confluence.security">
+<id name="id">17072133</id>
+<property name="type"><![CDATA[View]]></property>
+<property name="userName"><![CDATA[corporatetrainer]]></property>
+<property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
+</property>
+<property name="creatorName"><![CDATA[corporatetrainer]]></property>
+<property name="creationDate">2011-05-19 10:22:05.000</property>
+<property name="lastModifierName"><![CDATA[corporatetrainer]]></property>
+<property name="lastModificationDate">2011-05-19 10:22:05.000</property>
+</object>
+```
+
 
 Helpful on-liner to remove the entries from entities.xml
 
-<pre><code>sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml</code></pre>
+```bash
+$ sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml
+```
 
 Make sure there are no syntax errors that will cause the import to fail
-<pre><code>xmllint --noout entities.xml</code></pre>
+<pre>xmllint --noout entities.xml</pre>
 
 Retry the import and Good Luck!

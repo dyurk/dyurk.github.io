@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel'
+title: JIRA v5 SVN commit tab error
 author: David Yurkiewicz
 author_login: admin
 author_email: david.yurkiewicz@gmail.com
@@ -20,6 +20,9 @@ tags:
 - subversion
 comments: []
 ---
+<pre>JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel</pre>
+
+
 To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.
 <pre>$JIRA_HOME/caches/indexes/plugins/atlassian-subversion-revisions/</pre>
 Now restart JIRA, the subversion tab should now start displaying commits.

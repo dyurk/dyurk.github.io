@@ -20,8 +20,12 @@ comments: []
 <div>
 
 If you are getting the following error:
-<p class="wp-caption-dd"><strong>"Can't create file: filename.xx. Right-click the folder you   want to create  the file in, and then click Properties on the shortcut   menu to check  your permissions for the folder".</strong></p>
-1.  Open REGEDIT.EXE and go to Edit -&gt; Find... In the Find dialog box  type "<strong>OutlookSecureTempFolder</strong>" without the quotes and locate that  registry key.2. That key will contain the actual folder location, and will look like:
+
+<blockquote>"Can't create file: filename.xx. Right-click the folder you   want to create  the file in, and then click Properties on the shortcut   menu to check  your permissions for the folder".</blockquote>
+
+1.  Open REGEDIT.EXE and go to Edit -&gt; Find... 
+In the Find dialog box  type "<strong>OutlookSecureTempFolder</strong>" without the quotes and locate that  registry key.2. That key will contain the actual folder location, and will look like:
+<br>
 
 C:Documents and Settings%USER_NAME%Local SettingsTemporary Internet FilesOLK# (where # is a random letter or number)
 

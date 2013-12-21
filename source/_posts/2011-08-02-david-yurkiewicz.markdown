@@ -13,7 +13,8 @@ categories: []
 tags: []
 comments: []
 ---
-[caption id="attachment_352" align="alignleft" width="300"]<a href="http://dyurk.com/wp-content/uploads/2011/08/david.jpg"><img class="size-medium wp-image-352" title="David Yurkiewicz" alt="David Yurkiewicz" src="http://dyurk.com/wp-content/uploads/2011/08/david-300x300.jpg" width="300" height="300" /></a> David Yurkiewicz[/caption]
+<a href="http://dyurk.com/wp-content/uploads/2011/08/david.jpg"><img class="size-medium wp-image-352" title="David Yurkiewicz" alt="David Yurkiewicz" src="http://dyurk.com/wp-content/uploads/2011/08/david-300x300.jpg" width="300" height="300" /></a>
+
 <h1>David Yurkiewicz</h1>
 <em>Web Operations Engineer aka Systems administrator currently working at Etsy. Mostly focused on open source web technologies.</em>
 
@@ -23,11 +24,6 @@ I've had the privilege of doing systems administration for quite some time now
 
 <span style="line-height: 1.5em;">Please fell free to communicate with me! Follow me @d87tech or click on the contact page. </span>
 
-Thanks for the visit!
-
-&nbsp;
-
-&nbsp;
 <h4>More on me:</h4>
 <a href="http://www.linkedin.com/in/davidyurkiewicz"><img alt="View David Yurkiewicz's profile on LinkedIn" src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" /></a>
 

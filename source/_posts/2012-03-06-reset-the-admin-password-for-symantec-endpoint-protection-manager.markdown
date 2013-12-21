@@ -20,7 +20,7 @@ tags:
 - endpoint
 comments: []
 ---
-[caption id="attachment_430" align="aligncenter" width="552" caption="Symantec Enpoint Manager"]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a>
 
 You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.
 <p class="wp-caption">Note: If the account has been locked out due to repeated logon attempts, the resetpass.bat tool does not unlock the account. The default lockout period is 15 minutes.</p>
@@ -31,4 +31,4 @@ You can use the resetpass.bat tool to reset the user name and password for the a
 	<li>Double-click resetpass.bat. The user name and password are reset to admin.</li>
 	<li>Log on to Symantec Endpoint Protection Manager using admin for both the user name and the password, and change the password.</li>
 </ol>
-[caption id="attachment_429" align="aligncenter" width="417" caption="Symantec Endpoint Protection Manager password reset"]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a>

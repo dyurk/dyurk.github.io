@@ -24,10 +24,10 @@ Load the Windows Server 2008 installation cd &amp; navigate to adprep folder via
 
 Now run the following command, which will prepare the forest schema:
 <pre>adprep /forestprep</pre>
-[caption id="attachment_421" align="aligncenter" width="699" caption="adprep command"]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a>
 
 &nbsp;
 
 We will also need to run another command:
 <pre>adprep /domainprep /gpprep</pre>
-[caption id="attachment_422" align="aligncenter" width="703" caption="domainprep command"]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a>[/caption]
+<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a>

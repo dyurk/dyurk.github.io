@@ -10,7 +10,7 @@ wordpress_id: 645
 wordpress_url: http://d87studios.com/blog/?p=645
 date: 2013-02-20 22:08:22.000000000 -05:00
 categories:
-- Uncategorized
+- web operations
 tags:
 - error
 - mysql

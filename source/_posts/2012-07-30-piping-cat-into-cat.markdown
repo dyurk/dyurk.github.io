@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: piping CAT into CAT
+title: Concatenate CAT
 author: David Yurkiewicz
 author_login: admin
 author_email: david.yurkiewicz@gmail.com

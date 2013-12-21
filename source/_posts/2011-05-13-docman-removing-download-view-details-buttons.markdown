@@ -17,7 +17,8 @@ comments: []
 Go to <strong>/components/com_docman/themes/default/templates/documents/tasks.tpl.php</strong>
 
 Replace everything on line 37 and below with this code:
-<pre>foreach($this-&gt;doc-&gt;buttons as $button) {
+```php
+foreach($this-&gt;doc-&gt;buttons as $button) {
 $popup = ($button-&gt;params-&gt;get('popup', false)) ? 'type="popup"' : '';
 $attr = '';
 if($class = $button-&gt;params-&gt;get('class', '')) {
@@ -29,7 +30,8 @@ if (in_array($button-&gt;text,$skip)) CONTINUE; // &lt;-- skip "echo" if in list
 &lt;?php echo $button-&gt;text ?&gt;
 &lt;/a&gt;
 &lt;/li&gt;&lt;?php
-}</pre>
+}
+```
 &nbsp;
 
 You might also want to remove that annoying white space left off. To do this go to:
@@ -39,10 +41,12 @@ You might also want to remove that annoying white space left off. To do this go 
 Replace line 177-185 with this:
 
 <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;">.dm_taskbar {</span>
-<pre>height: 0px;
+```css
+height: 0px;
 padding-bottom:0px;
 margin-bottom:0px;
 /*border-bottom: 1px solid #bbb;*/
 font-family: arial;
 list-style-type: none;
-}</pre>
+}
+```
