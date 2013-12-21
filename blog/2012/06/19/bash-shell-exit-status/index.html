@@ -94,14 +94,14 @@
 <div class="entry-content"><p>Exit status codes are helpful when creating shell scripts with IF statements. They are also helpful when you are trying to troubleshoot the outcome of a command. You can use &ldquo;<em>echo</em> <em>$?&rdquo;</em> to find out the exit status. In the terminal exit codes are not displayed on the screen by default, we have to echo them. Here are a few examples:</p>
 
 <pre lang="shell" prompt="$"> grep "asda" test.log
-<br> </pre>
+</pre>
 
 
 <p>In this case we get no output. Now if we echo $? we should get an exit code:</p>
 
 <pre lang="shell" prompt="$">$ grep "asda" test.log
-<br> echo $?
-1</pre>
+<br>$ echo $?
+  1</pre>
 
 
 <p>In this case we get a &ldquo;1&rdquo;  which is a failure. &ldquo;0&rdquo; = Success, &ldquo;2&rdquo; = Incorrect Usage, &ldquo;126&rdquo; = Not Executable, &#8221;127&#8221; = Command Not Found.</p>
@@ -172,10 +172,6 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
       </li>
     
@@ -185,6 +181,10 @@
     
       <li class="post">
         <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/temporarily-disable-puppet/">Temporarily Disable Puppet</a>
       </li>
     
   </ul>

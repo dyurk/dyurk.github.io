@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Subversion | My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/blog/categories/subversion/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -27,11 +27,14 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel']]></title>
+    <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error]]></title>
     <link href="http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/"/>
     <updated>2012-11-19T18:09:49-05:00</updated>
     <id>http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel</id>
-    <content type="html"><![CDATA[<p>To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.</p>
+    <content type="html"><![CDATA[<pre>JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel</pre>
+
+
+<p>To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.</p>
 
 <pre>$JIRA_HOME/caches/indexes/plugins/atlassian-subversion-revisions/</pre>
 

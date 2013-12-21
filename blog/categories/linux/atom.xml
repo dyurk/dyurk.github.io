@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -21,8 +21,7 @@
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-</pre>
+Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet</pre>
 
 
 <p>Delete all ContentPermission entries from the XML file &ndash; this will remove all unnecessary/unsupported classes and will allow the import to continue. Open the zip file and edit entities.xml</p>
@@ -30,52 +29,37 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
 <br>
 
 
-<p>Search for <code><object class="ContentPermission"...>.</code> You will see <code><object></code> entries like this:</p>
+<p>Search for <code>&lt;object class="ContentPermission"...&gt;</code> You will see <code>&lt;object&gt;</code> entries like this:</p>
 
-<pre class="prettyprint">
+<p>```xml</p>
 
-237081 <object class="ContentPermission" package="com.atlassian.confluence.security">
-237082 <id name="id">17072133</id>
-237083 <property name="type">&lt;![CDATA[View]]&gt;</property>
-237084 <property name="userName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237085 <property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
-237086 </property>
-237087 <property name="creatorName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237088 <property name="creationDate">2011-05-19 10:22:05.000</property>
-237089 <property name="lastModifierName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237090 <property name="lastModificationDate">2011-05-19 10:22:05.000</property>
-237091 </object>
+<object class="ContentPermission" package="com.atlassian.confluence.security">
+<id name="id">17072133</id>
+<property name="type">&lt;![CDATA[View]]&gt;</property>
+<property name="userName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+<property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
+</property>
+<property name="creatorName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+<property name="creationDate">2011-05-19 10:22:05.000</property>
+<property name="lastModifierName">&lt;![CDATA[corporatetrainer]]&gt;</property>
+<property name="lastModificationDate">2011-05-19 10:22:05.000</property>
+</object>
 
-</pre>
 
+<p>```</p>
 
 <p>Helpful on-liner to remove the entries from entities.xml</p>
 
-<pre><code>sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml</code></pre>
-
+<p><code>bash
+$ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.xml
+</code></p>
 
 <p>Make sure there are no syntax errors that will cause the import to fail</p>
 
-<pre><code>xmllint --noout entities.xml</code></pre>
+<pre>xmllint --noout entities.xml</pre>
 
 
 <p>Retry the import and Good Luck!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Redirect All HTTP Request to HTTPS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https/"/>
-    <updated>2013-03-13T13:57:54-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https</id>
-    <content type="html"><![CDATA[<pre class="prettyprint">
-<VirtualHost *:80>
-       ServerAlias *
-       RewriteEngine On
-       RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
-</VirtualHost>
-</pre>
-
 ]]></content>
   </entry>
   
@@ -118,7 +102,7 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
 
 <p>Edit $CONFLUENCE_HOME/bin/setenv.sh</p>
 
-<p>Find the section JAVA_OPTS=&ldquo;-Xms256m -Xmx512m -XX:MaxPermSize=256m and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.</p>
+<p>Find the section <code>JAVA_OPTS="-Xms256m -Xmx512m -XX:MaxPermSize=256m</code> and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.</p>
 ]]></content>
   </entry>
   
@@ -141,6 +125,35 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
 
 
 <pre id="crayon-51152fba206b0-6">make &amp;&amp; make install</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configuring Memcached]]></title>
+    <link href="http://dyurk.github.io/blog/2013/01/11/configuring-memcached/"/>
+    <updated>2013-01-11T16:45:26-05:00</updated>
+    <id>http://dyurk.github.io/blog/2013/01/11/configuring-memcached</id>
+    <content type="html"><![CDATA[<h3>What is memcached?</h3>
+
+
+<p>memcached is a high-performance, distributed memory object caching system, generic in nature, but originally intended for use in speeding up dynamic web applications by alleviating database load.</p>
+
+<h3>Configuring memcached</h3>
+
+
+<p>Edit</p>
+
+<pre>/etc/sysconfig/memcached</pre>
+
+
+<p>Sample configuration. Cache size is important, it determines the amount of ram in megabytes that are allocated to memcached pool.</p>
+
+<pre>PORT="11211"
+USER="memcached"
+MAXCONN="1024"
+CACHESIZE="12288"
+OPTIONS=""</pre>
 
 ]]></content>
   </entry>

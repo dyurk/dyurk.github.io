@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -21,8 +21,7 @@
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
-</pre>
+Caused by: net.sf.hibernate.PropertyValueException: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet</pre>
 
 
 <p>Delete all ContentPermission entries from the XML file &ndash; this will remove all unnecessary/unsupported classes and will allow the import to continue. Open the zip file and edit entities.xml</p>
@@ -30,52 +29,46 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
 <br>
 
 
-<p>Search for <code><object class="ContentPermission"...>.</code> You will see <code><object></code> entries like this:</p>
+<p>Search for <code>&lt;object class="ContentPermission"...&gt;</code> You will see <code>&lt;object&gt;</code> entries like this:</p>
 
-<pre class="prettyprint">
-
-237081 <object class="ContentPermission" package="com.atlassian.confluence.security">
-237082 <id name="id">17072133</id>
-237083 <property name="type">&lt;![CDATA[View]]&gt;</property>
-237084 <property name="userName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237085 <property name="groupName"/><property name="owningSet" class="ContentPermissionSet" package="com.atlassian.confluence.security"><id name="id">17039363</id>
-237086 </property>
-237087 <property name="creatorName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237088 <property name="creationDate">2011-05-19 10:22:05.000</property>
-237089 <property name="lastModifierName">&lt;![CDATA[corporatetrainer]]&gt;</property>
-237090 <property name="lastModificationDate">2011-05-19 10:22:05.000</property>
-237091 </object>
-
-</pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;object</span> <span class="na">class=</span><span class="s">&quot;ContentPermission&quot;</span> <span class="na">package=</span><span class="s">&quot;com.atlassian.confluence.security&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;id</span> <span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>17072133<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;type&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[View]]&gt;</span><span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;userName&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[corporatetrainer]]&gt;</span><span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;groupName&quot;</span><span class="nt">/&gt;&lt;property</span> <span class="na">name=</span><span class="s">&quot;owningSet&quot;</span> <span class="na">class=</span><span class="s">&quot;ContentPermissionSet&quot;</span> <span class="na">package=</span><span class="s">&quot;com.atlassian.confluence.security&quot;</span><span class="nt">&gt;&lt;id</span> <span class="na">name=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>17039363<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'><span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;creatorName&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[corporatetrainer]]&gt;</span><span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;creationDate&quot;</span><span class="nt">&gt;</span>2011-05-19 10:22:05.000<span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;lastModifierName&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[corporatetrainer]]&gt;</span><span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;lastModificationDate&quot;</span><span class="nt">&gt;</span>2011-05-19 10:22:05.000<span class="nt">&lt;/property&gt;</span>
+</span><span class='line'><span class="nt">&lt;/object&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Helpful on-liner to remove the entries from entities.xml</p>
 
-<pre><code>sed -i '/<object class="ContentPermission"/,/<\/object>/d' entities.xml</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sed -i <span class="s1">&#39;/&lt;object class=&quot;ContentPermission&quot;/,/&lt;\/object&gt;/d&#39;</span> entities.xml
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Make sure there are no syntax errors that will cause the import to fail</p>
 
-<pre><code>xmllint --noout entities.xml</code></pre>
+<pre>xmllint --noout entities.xml</pre>
 
 
 <p>Retry the import and Good Luck!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Redirect All HTTP Request to HTTPS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https/"/>
-    <updated>2013-03-13T13:57:54-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/13/redirect-all-http-request-to-https</id>
-    <content type="html"><![CDATA[<pre class="prettyprint">
-<VirtualHost *:80>
-       ServerAlias *
-       RewriteEngine On
-       RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
-</VirtualHost>
-</pre>
-
 ]]></content>
   </entry>
   
@@ -86,30 +79,50 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
     <id>http://dyurk.github.io/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
-<pre class="prettyprint">
-<VirtualHost *:80>
-        ServerName myapp.website.com
-        ProxyRequests Off
-
-        <Proxy *>
-                Order deny,allow
-                Allow from all
-        </Proxy>
-
-                # Logging
-        LogFormat "%h %l %u %t \"%r\" %>s %b" common
-        CustomLog logs/access_log common
-
-
-        ProxyTimeout    7200
-        ProxyPreserveHost On
-        ProxyPass           /       http://localhost:7990/
-        ProxyPassReverse    /       http://localhost:7990/
-        ProxyTimeout     86400
-
-</VirtualHost>
-
-</pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;VirtualHost *:80&gt;
+</span><span class='line'>        ServerName myapp.website.com
+</span><span class='line'>        ProxyRequests Off
+</span><span class='line'>
+</span><span class='line'>        &lt;Proxy *&gt;
+</span><span class='line'>                Order deny,allow
+</span><span class='line'>                Allow from all
+</span><span class='line'>        &lt;/Proxy&gt;
+</span><span class='line'>
+</span><span class='line'>                # Logging
+</span><span class='line'>        LogFormat "%h %l %u %t \"%r\" %&gt;s %b" common
+</span><span class='line'>        CustomLog logs/access_log common
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        ProxyTimeout    7200
+</span><span class='line'>        ProxyPreserveHost On
+</span><span class='line'>        ProxyPass           /       http://localhost:7990/
+</span><span class='line'>        ProxyPassReverse    /       http://localhost:7990/
+</span><span class='line'>        ProxyTimeout     86400
+</span><span class='line'>
+</span><span class='line'>&lt;/VirtualHost&gt;
+</span><span class='line'></span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
@@ -280,25 +293,7 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
 
 <p>Edit $CONFLUENCE_HOME/bin/setenv.sh</p>
 
-<p>Find the section JAVA_OPTS=&ldquo;-Xms256m -Xmx512m -XX:MaxPermSize=256m and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Photos]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/17/photos/"/>
-    <updated>2013-02-17T17:09:10-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/17/photos</id>
-    <content type="html"><![CDATA[<p>[flickrps]</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[632]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/17/632/"/>
-    <updated>2013-02-17T17:09:10-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/17/632</id>
-    <content type="html"><![CDATA[
+<p>Find the section <code>JAVA_OPTS="-Xms256m -Xmx512m -XX:MaxPermSize=256m</code> and set accordingly.  Xmx is maximum, Xms is minimum, and MaxPermSize is PermGen.</p>
 ]]></content>
   </entry>
   
@@ -322,15 +317,6 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
 
 <pre id="crayon-51152fba206b0-6">make &amp;&amp; make install</pre>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[RSS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/01/16/rss-2/"/>
-    <updated>2013-01-16T02:29:06-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/01/16/rss-2</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -377,11 +363,14 @@ OPTIONS=""</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel']]></title>
+    <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error]]></title>
     <link href="http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/"/>
     <updated>2012-11-19T18:09:49-05:00</updated>
     <id>http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel</id>
-    <content type="html"><![CDATA[<p>To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.</p>
+    <content type="html"><![CDATA[<pre>JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel</pre>
+
+
+<p>To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.</p>
 
 <pre>$JIRA_HOME/caches/indexes/plugins/atlassian-subversion-revisions/</pre>
 
@@ -509,6 +498,69 @@ Shell changed.</pre>
 <p>Here we are going to &ldquo;output&rdquo; and we transferring &#8221;myfile.txt&#8221; to our local /tmp directory.</p>
 
 <pre>lftp -e 'set net:timeout 10;cd output/;get myfile.txt -o /tmp/; bye' -u USER,PASSWORD ftp.foo.com/</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Puppet: Adding a Package]]></title>
+    <link href="http://dyurk.github.io/blog/2012/08/09/puppet-adding-a-package/"/>
+    <updated>2012-08-09T13:04:08-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/08/09/puppet-adding-a-package</id>
+    <content type="html"><![CDATA[<p>For this example lets ensure we have lftp install.</p>
+
+<pre>package { "lftp":
+        ensure =&gt; "latest"
+}</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Concatenate CAT]]></title>
+    <link href="http://dyurk.github.io/blog/2012/07/30/piping-cat-into-cat/"/>
+    <updated>2012-07-30T15:30:07-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/07/30/piping-cat-into-cat</id>
+    <content type="html"><![CDATA[<p>Let&rsquo;s say we have two files, <em>A.txt</em> &amp; <em>B.txt</em>. To show the output of these two files at once you will need to pipe cat using a &ldquo;&ndash;&rdquo;.</p>
+
+<pre>cat a.txt | cat - b.txt</pre>
+
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Chmod Directories and Files Separately]]></title>
+    <link href="http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files/"/>
+    <updated>2012-07-10T01:28:42-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files</id>
+    <content type="html"><![CDATA[<p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
+
+<p>For Directories:</p>
+
+<pre lang="shell" prompt="$">find . -type d -exec chmod -v 775 {} \;</pre>
+
+
+<p>For Files:</p>
+
+<pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL High Load / Other Issues - Leap Second Bug]]></title>
+    <link href="http://dyurk.github.io/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/"/>
+    <updated>2012-07-03T01:28:25-04:00</updated>
+    <id>http://dyurk.github.io/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug</id>
+    <content type="html"><![CDATA[<p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
+
+<p>The fix was simple:</p>
+
+<pre lang="shell" prompt="$"> service ntpd stop
+<br>date -s "`date`"
+<br>service ntpd start</pre>
 
 ]]></content>
   </entry>

@@ -9,7 +9,14 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Go to /components/com_docman/themes/default/templates/documents/tasks.tpl.php Replace everything on line 37 and below with this code: foreach($this-& &hellip;">
+  <meta name="description" content="Go to /components/com_docman/themes/default/templates/documents/tasks.tpl.php Replace everything on line 37 and below with this code: 1
+2
+3
+4
+5
+6
+7
+8 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,19 +102,33 @@
 
 <p>Replace everything on line 37 and below with this code:</p>
 
-<pre>foreach($this-&gt;doc-&gt;buttons as $button) {
-$popup = ($button-&gt;params-&gt;get('popup', false)) ? 'type="popup"' : '';
-$attr = '';
-if($class = $button-&gt;params-&gt;get('class', '')) {
-$attr = 'class="' . $class . '"';
-}
-$skip = array("Download","View","Details");  // &lt;-- add list of buttons
-if (in_array($button-&gt;text,$skip)) CONTINUE; // &lt;-- skip "echo" if in list    ?&gt;&lt;li &lt;?php echo $attr?&gt;&gt;
-&lt;a href="/&lt;?php echo $button-&gt;link?&gt;" &lt;?php echo $popup?&gt;&gt;
-&lt;?php echo $button-&gt;text ?&gt;
-&lt;/a&gt;
-&lt;/li&gt;&lt;?php
-}</pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">doc</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">buttons</span> <span class="k">as</span> <span class="nv">$button</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="nv">$popup</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">params</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;popup&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span> <span class="o">?</span> <span class="s1">&#39;type=&quot;popup&quot;&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$attr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span><span class="p">(</span><span class="nv">$class</span> <span class="o">=</span> <span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">params</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'><span class="nv">$attr</span> <span class="o">=</span> <span class="s1">&#39;class=&quot;&#39;</span> <span class="o">.</span> <span class="nv">$class</span> <span class="o">.</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nv">$skip</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&quot;Download&quot;</span><span class="p">,</span><span class="s2">&quot;View&quot;</span><span class="p">,</span><span class="s2">&quot;Details&quot;</span><span class="p">);</span><span class="err"> </span> <span class="c1">// &amp;lt;-- add list of buttons</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">text</span><span class="p">,</span><span class="nv">$skip</span><span class="p">))</span> <span class="k">CONTINUE</span><span class="p">;</span> <span class="c1">// &amp;lt;-- skip &quot;echo&quot; if in list    ?&amp;gt;&amp;lt;li &amp;lt;?php echo $attr?&amp;gt;&amp;gt;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/&amp;lt;?php echo </span><span class="si">$button</span><span class="s2">-&amp;gt;link?&amp;gt;&quot;</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$popup</span><span class="o">?&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">text</span> <span class="o">?&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">/</span><span class="nx">a</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">/</span><span class="nx">li</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>&nbsp;</p>
@@ -120,13 +141,21 @@ if (in_array($button-&gt;text,$skip)) CONTINUE; // &lt;-- skip "echo" if in list
 
 <p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;">.dm_taskbar {</span></p>
 
-<pre>height: 0px;
-padding-bottom:0px;
-margin-bottom:0px;
-/*border-bottom: 1px solid #bbb;*/
-font-family: arial;
-list-style-type: none;
-}</pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">height</span><span class="o">:</span> <span class="nt">0px</span><span class="o">;</span>
+</span><span class='line'><span class="nt">padding-bottom</span><span class="nd">:0px</span><span class="o">;</span>
+</span><span class='line'><span class="nt">margin-bottom</span><span class="nd">:0px</span><span class="o">;</span>
+</span><span class='line'><span class="c">/*border-bottom: 1px solid #bbb;*/</span>
+</span><span class='line'><span class="nt">font-family</span><span class="o">:</span> <span class="nt">arial</span><span class="o">;</span>
+</span><span class='line'><span class="nt">list-style-type</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -193,10 +222,6 @@ list-style-type: none;
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
       </li>
     
@@ -206,6 +231,10 @@ list-style-type: none;
     
       <li class="post">
         <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/temporarily-disable-puppet/">Temporarily Disable Puppet</a>
       </li>
     
   </ul>

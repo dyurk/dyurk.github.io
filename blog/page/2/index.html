@@ -9,8 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="echo 'flush_all' | nc localhost 11211 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,184 +65,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/16/rss-2/">RSS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-16T02:29:06-05:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/11/configuring-memcached/">Configuring Memcached</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-11T16:45:26-05:00" pubdate data-updated="true">Jan 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>What is memcached?</h3>
-
-
-<p>memcached is a high-performance, distributed memory object caching system, generic in nature, but originally intended for use in speeding up dynamic web applications by alleviating database load.</p>
-
-<h3>Configuring memcached</h3>
-
-
-<p>Edit</p>
-
-<pre>/etc/sysconfig/memcached</pre>
-
-
-<p>Sample configuration. Cache size is important, it determines the amount of ram in megabytes that are allocated to memcached pool.</p>
-
-<pre>PORT="11211"
-USER="memcached"
-MAXCONN="1024"
-CACHESIZE="12288"
-OPTIONS=""</pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/">SVN Cat Error: &#8220;File Not Found&#8221;. Gives Wrong Revision</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-06T02:47:02-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You will need to use the peg revision</p>
-
-<p>svn <em><code>command</code></em> -r <em><code>OPERATIVE-REV</code></em> item@<em><code>PEG-REV</code></em></p>
-
-<p><a href="http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html">http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/">JIRA V5 SVN Commit Tab Error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel&#8217;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-19T18:09:49-05:00" pubdate data-updated="true">Nov 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To fix this issue you will need to remove the <strong>atlassian-subversion-revisions </strong>folder which is located under the home directory of the JIRA user.</p>
-
-<pre>$JIRA_HOME/caches/indexes/plugins/atlassian-subversion-revisions/</pre>
-
-
-<p>Now restart JIRA, the subversion tab should now start displaying commits.</p>
-
-<p>&nbsp;</p>
-
-<h6>source: <a href="https://confluence.atlassian.com/display/JIRAKB/How+to+resolve+JIRA+Sub+Version+Plugin+Errors+after+an+upgrade">https://confluence.atlassian.com/display/JIRAKB/How+to+resolve+JIRA+Sub+Version+Plugin+Errors+after+an+upgrade</a></h6>
-
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -525,6 +346,177 @@ Shell changed.</pre>
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/09/puppet-adding-a-package/">Puppet: Adding a Package</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T13:04:08-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For this example lets ensure we have lftp install.</p>
+
+<pre>package { "lftp":
+        ensure =&gt; "latest"
+}</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/30/piping-cat-into-cat/">Concatenate CAT</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T15:30:07-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Let&rsquo;s say we have two files, <em>A.txt</em> &amp; <em>B.txt</em>. To show the output of these two files at once you will need to pipe cat using a &ldquo;&ndash;&rdquo;.</p>
+
+<pre>cat a.txt | cat - b.txt</pre>
+
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/10/chmod-directories-only-or-files/">Chmod Directories and Files Separately</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T01:28:42-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
+
+<p>For Directories:</p>
+
+<pre lang="shell" prompt="$">find . -type d -exec chmod -v 775 {} \;</pre>
+
+
+<p>For Files:</p>
+
+<pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/">MySQL High Load / Other Issues - Leap Second Bug</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-03T01:28:25-04:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
+
+<p>The fix was simple:</p>
+
+<pre lang="shell" prompt="$"> service ntpd stop
+<br>date -s "`date`"
+<br>service ntpd start</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -546,10 +538,6 @@ Shell changed.</pre>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
       </li>
     
@@ -559,6 +547,10 @@ Shell changed.</pre>
     
       <li class="post">
         <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/temporarily-disable-puppet/">Temporarily Disable Puppet</a>
       </li>
     
   </ul>

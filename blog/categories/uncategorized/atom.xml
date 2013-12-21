@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Uncategorized | My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/blog/categories/uncategorized/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,25 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
-    <updated>2013-02-20T22:08:22-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
-    <content type="html"><![CDATA[<p>The server&rsquo;s default <a href="http://dev.mysql.com/doc/refman/5.5/en//server-system-variables.html#sysvar_max_allowed_packet"><code>max_allowed_packet</code></a> value is 1MB and it looks like it has exceeded the default max. You can increase this if the server needs to handle big queries. This can be done in two ways:</p>
-
-<p>Start MySQL client with the following option (64 MB for this example)</p>
-
-<pre><code>mysql --max_allowed_packet=64M </code></pre>
-
-
-<p>or Add the following in your my.cnf file</p>
-
-<pre><code>max_allowed_packet=64M</code></pre>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
@@ -105,6 +86,32 @@ Shell changed.</pre>
 
 <pre lang="shell" prompt="$">sudo apt-get remove exo-utils</pre>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
+    <link href="http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
+    <updated>2012-03-06T13:22:07-05:00</updated>
+    <id>http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
+    <content type="html"><![CDATA[<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
+
+<p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>
+
+<p class="wp-caption">Note: If the account has been locked out due to repeated logon attempts, the resetpass.bat tool does not unlock the account. The default lockout period is 15 minutes.</p>
+
+
+<p><strong>To reset the administrator password</strong></p>
+
+<ol>
+    <li>Open Windows Explorer on the computer that runs Symantec Endpoint Protection Manager.</li>
+    <li>Locate the Drive:\Program Files\Symantec\Symantec Endpoint Protection Manager\Tools folder.</li>
+    <li>Double-click resetpass.bat. The user name and password are reset to admin.</li>
+    <li>Log on to Symantec Endpoint Protection Manager using admin for both the user name and the password, and change the password.</li>
+</ol>
+
+
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a></p>
 ]]></content>
   </entry>
   

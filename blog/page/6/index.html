@@ -9,8 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Anything that has to do with Android.
-">
+  <meta name="description" content="Open CMD For this example lets try GMAIL nslookup –type=mx gmail.com You will get something like this: gmail.com MX preference=30, exchanger = alt3. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/07/20/296/">296</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/05/13/ping-email-address/">&#8220;PING&#8221; Email Address</a></h1>
     
     
       <p class="meta">
@@ -88,14 +87,65 @@
   
 
 
-<time datetime="2011-07-20T18:21:00-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2011</time>
+<time datetime="2011-05-13T16:40:21-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Anything that has to do with Android.</p>
+  <div class="entry-content"><p>Open CMD</p>
+
+<p>For this example lets try GMAIL</p>
+
+<pre>nslookup –type=mx gmail.com
+
+</pre>
+
+
+<p>You will get something like this:</p>
+
+<pre>gmail.com MX preference=30, exchanger = alt3.gmail-smtp-in.l.google.com
+gmail.com MX preference=20, exchanger = alt2.gmail-smtp-in.l.google.com
+gmail.com MX preference=5,  exchanger = gmail-smtp-in.l.google.com
+gmail.com MX preference=10, exchanger = alt1.gmail-smtp-in.l.google.com
+gmail.com MX preference=40, exchanger = alt4.gmail-smtp-in.l.google.com
+</pre>
+
+
+<p>Now lets connect to the mail server</p>
+
+<pre>telnet gmail-smtp-in.l.google.com 25</pre>
+
+
+<p>&nbsp;</p>
+
+<p>Get acknowledge by saying Hello</p>
+
+<pre>HELO</pre>
+
+
+<p>Type your email address</p>
+
+<pre>mail from:&lt;joe@doe.com&gt;</pre>
+
+
+<p>Type the email address you want to test</p>
+
+<pre>rcpt to:&lt;testemail@gmail.com&gt;
+
+
+
+</pre>
+
+
+<p>You can also use this website:</p>
+
+<p><a href="http://verify-email.org/">http://verify-email.org/</a></p>
+
+<p>&nbsp;</p>
+
+<p><em>Source: <a href="http://www.labnol.org/software/verify-email-address/18220/">http://www.labnol.org/software/verify-email-address/18220/</a></em></p>
 </div>
   
   
@@ -108,7 +158,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/07/20/295/">295</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/05/13/how-to-copy-outlooks-autocomplete-name-list-to-another-computer/">How to Copy Outlook&#8217;s Autocomplete Name List to Another Computer.</a></h1>
     
     
       <p class="meta">
@@ -124,14 +174,20 @@
   
 
 
-<time datetime="2011-07-20T18:21:00-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2011</time>
+<time datetime="2011-05-13T16:39:42-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Linux related post.</p>
+  <div class="entry-content"><p>On the computer with the saved AutoComplete names</p>
+
+<p>go to <em>C:&lt;/em><em></em>Documents and Settings&lt;em>user name&lt;/em>Application Data\MicrosoftOutlook.</p>
+
+<p>Copy the .NK2 File.</p>
+
+<p>Source:<a href="http://office.microsoft.com/en-us/outlook-help/copy-autocomplete-name-list-to-another-computer-HA001139451.aspx"><a href="http://office.microsoft.com/en-us/outlook-help/copy-autocomplete-name-list-to-another-computer-HA001139451.aspx">http://office.microsoft.com/en-us/outlook-help/copy-autocomplete-name-list-to-another-computer-HA001139451.aspx</a></a></p>
 </div>
   
   
@@ -144,7 +200,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/07/20/294/">294</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/05/13/force-ota-update-check-on-t-mobile-g2/">Force OTA Update Check on T-mobile G2</a></h1>
     
     
       <p class="meta">
@@ -160,14 +216,16 @@
   
 
 
-<time datetime="2011-07-20T18:21:00-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2011</time>
+<time datetime="2011-05-13T16:38:18-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Topics related to the Windows operating system.</p>
+  <div class="entry-content"><p>To force OTA update checking on the T-mobile G2 type the following in the dialer:</p>
+
+<p><strong><em>#</em>#checkin#<em>#</em></strong></p>
 </div>
   
   
@@ -180,7 +238,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/07/20/292/">292</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/05/13/netgear-wg302-firmware-upgrade-via-telnet/">Netgear WG302 Firmware Upgrade via Telnet</a></h1>
     
     
       <p class="meta">
@@ -196,126 +254,85 @@
   
 
 
-<time datetime="2011-07-20T18:19:25-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2011</time>
+<time datetime="2011-05-13T16:37:34-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
-</div>
-  
-  
+  <div class="entry-content"><p><a href="http://kb.netgear.com/app/answers/detail/a_id/728"><a href="http://kb.netgear.com/app/answers/detail/a_id/728">http://kb.netgear.com/app/answers/detail/a_id/728</a></a></p>
+
+<p>NOTE: Instead of using SolarWinds TFTP server i used  TFTPd32(<a href="http://tftpd32.jounin.net/"><a href="http://tftpd32.jounin.net/">http://tftpd32.jounin.net/</a></a>)</p>
+
+<p><strong>Part 1: Upgrade the Boot Loader Commands:</strong></p>
+
+<ol>
+<li>Connect to the WG302 console port via MS Hyper terminal with these settings:</li>
+</ol>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/20/289/">289</a></h1>
-    
-    
-      <p class="meta">
-        
+<ul>
+    <li>Bits      per second: <strong>9600</strong></li>
+    <li>Data      bits: <strong>8</strong></li>
+    <li>Parity:      <strong>None</strong></li>
+    <li>Stop      bits: <strong>1</strong></li>
+    <li>Flow      control: None</li>
+</ul>
 
 
+<p><strong><img class="alignnone" title="Screen 1" src="http://kbserver.netgear.com/images/wg302_image001.gif" alt="" width="344" height="400" />
+</strong></p>
+
+<ol>
+<li><p>Copy <strong>patch.txt</strong> from the zip file into a working file folder on your PC.</p></li>
+<li><p>Connect the access point to your PC’s communication port with an RS232 cable.</p></li>
+<li><p>After powering on the access point, immediately press <strong>CTRL-C (CTRL</strong> and <strong>C</strong> keys at the same time). The RedBoot&gt; prompt displays in HyperTerm. Here&rsquo;s an example of what this sequence might look like:</p></li>
+</ol>
 
 
+<p>+Ethernet eth0: MAC address 00:09:5b:74:f3:c5</p>
+
+<p>IP: 192.168.0.35/255.255.255.0, Gateway: 0.0.0.0
+Default server: 192.168.0.36, DNS server IP: 0.0.0.0</p>
+
+<p>RedBoot&trade; bootstrap and debug environment [ROM]</p>
+
+<p>Red Hat certified release, version 1.92 &ndash; built 18:59:19, Sep 19 2003</p>
+
+<p>Platform: IXDP425 Development Platform (XScale)</p>
+
+<p>Copyright &copy; 2000, 2001, 2002, Red Hat, Inc.</p>
+
+<p>RAM: 0x00000000-0x10000000, 0x0001f920-0x0ffd1000 available</p>
+
+<p>FLASH: 0x50000000 &ndash; 0x50800000, 64 blocks of 0x00020000 bytes each.</p>
+
+<p>== Executing boot script in 2.000 seconds &ndash; enter ^C to abort</p>
+
+<p>^C</p>
+
+<p>RedBoot&gt;</p>
+
+<ol>
+<li><p>Select <strong>Send Text File</strong> from <strong>Transfer</strong> Menu in HyperTerminal, and select <strong>patch.txt</strong> to transfer. The access point automatically rebots after upgrade is done.</p></li>
+<li><p>Continue to Part 2 to upgrade the firmware.</p></li>
+</ol>
 
 
+<p><strong>Part 2: To Upgrade the Firmware Using TFTP</strong></p>
+
+<ol>
+<li>Configure the IP address of your PC to <strong>192.168.0.36</strong>. 2. If you do not have a TFTP server on your PC, install one now. (These are available, free, from such places as Solarwinds. You may download the software from <a href="http://support.solarwinds.net/updates/New-customerFree.">http://support.solarwinds.net/updates/New-customerFree.</a>) 3. Copy the WG302 firmware image: <strong>wg302_v4_1_8.rmt</strong> into the TFTP Root directory, such as c:TFTP-Root. 4. Rename the image to <strong>wg302.rmt</strong>. (If your TFTP server gives an error &ldquo;ixp425.rmt not found&rdquo; then you have a beta unit. For beta units rename &ldquo;wg302.rmt&rdquo; to ixp425.rmt.) 5. Connect your PC and the WG302 access point directly with a CAT5 Ethernet cable. 6. Start the TFTP server. (An example, showing Solarwinds start-up window, appears below.)</li>
+</ol>
 
 
-  
+<p><img class="alignnone" title="2 Screen" src="http://kbserver.netgear.com/images/wg302_image003.gif" alt="" width="382" height="261" /></p>
 
-
-<time datetime="2011-07-20T18:18:41-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>[contact-form 1 &ldquo;Contact form 1&rdquo;]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/15/contact-me/">Contact Me</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-07-15T15:32:07-04:00" pubdate data-updated="true">Jul 15<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>[contact-form 1 &ldquo;Contact form 1&rdquo;]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/16/you-should-know-microsofts-web-platform-installer/">You Should Know: Microsoft&#8217;s Web Platform Installer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-16T13:44:46-04:00" pubdate data-updated="true">Jun 16<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a simple free tool that helps you download and install various components of the Microsoft Web Platform. It basically acts like an &ldquo;app store&rdquo; for your server.</p>
-
-<p>[caption id=&ldquo;attachment_262&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;617&rdquo; caption=&ldquo;Microsoft Web Platform Installer&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/06/webplatforminstaller1.png"><img class="size-full wp-image-262" title="Microsoft Web Platform Installer" src="http://d87studios.com/blog/wp-content/uploads/2011/06/webplatforminstaller1.png" alt="Microsoft Web Platform Installer" width="617" height="429" /></a>[/caption]</p>
-
-<p style="text-align: left;">If you are familiar with Cpanel&#8217;s Fantastico, this is a similar concept. There are different tools, databases and application that can be install using the Web Platform installer, some include; SQL Server Express and Compact, .NET Framework, ASP.NET, IIS and plenty of web applications like WordPress, Joomla and others.</p>
+<ol>
+<li><p>Disconnect the power cord from access point.</p></li>
+<li><p>Press and hold the reset button on access point. Plug in the power while holding the reset button.</p></li>
+</ol>
 
 
 <p>&nbsp;</p>
@@ -331,7 +348,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/06/07/some-client-computers-do-not-appear-in-the-wsus-console/">Some Client Computers Do Not Appear in the WSUS Console</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/05/13/wipe-dalvik-cache-in-terminal-andriod/">Wipe Dalvik Cache in Terminal, Andriod.</a></h1>
     
     
       <p class="meta">
@@ -347,242 +364,118 @@
   
 
 
-<time datetime="2011-06-07T20:33:03-04:00" pubdate data-updated="true">Jun 7<span>th</span>, 2011</time>
+<time datetime="2011-05-13T16:33:54-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>There are many reasons why some clients might not appear in the WSUS console. For example, GPO errors, a corrupt installation on the server or client side and issues with IIS  just to name a few.</p>
+  <div class="entry-content"><p><em><em>Root Required</em></em></p>
 
-<p>Many of these issues can be pinpointed by running the WSUS Client Diagnostic Tool and if necessary the Server Diagnostic Tool. Both of these tools can be downloaded here: <strong><a href="http://technet.microsoft.com/en-us/windowsserver/bb466192.aspx"><a href="http://technet.microsoft.com/en-us/windowsserver/bb466192.aspx">http://technet.microsoft.com/en-us/windowsserver/bb466192.aspx</a></a></strong></p>
+<p>Open your Terminal of choice and type the following.</p>
 
-<p>[caption id=&ldquo;attachment_211&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;577&rdquo; caption=&ldquo;WSUS Client Diagnostic Tool&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/06/wsus_client_diag.png"><img class="size-full wp-image-211  " title="WSUS Client Diagnostic Tool" src="http://d87studios.com/blog/wp-content/uploads/2011/06/wsus_client_diag.png" alt="WSUS Client Diagnostic Tool" width="577" height="422" /></a>[/caption]</p>
-
-<p>Usually when adding a new computer to your domain, if you have a correct Group Policy set in place you should see that computer show up in the WSUS console. Also if you want to force the issue you can open the command prompt and type the following:</p>
-
-<pre><strong>net start wuauserv</strong></pre>
-
-
-<pre><strong>wuauclt /detectnow</strong></pre>
+<pre>$su
+#cd /system/sd/dalvik-cache
+#rm *
+#exit
+$exit</pre>
 
 
-<h2>Active Directory Container</h2>
+<p>Reboot phone.</p>
+</div>
+  
+  
 
 
-<p>Recently while setting up some new computers, i ran through a problem where some computers were missing in the WSUS console. It was kind of random since some of the computers where showing, while a selected few were missing. I double checked that the computers had properly joined the domain, i ran &ldquo;<em>gpupdate /f&rdquo; </em>and they still could not be found.</p>
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/13/docman-removing-download-view-details-buttons/">DOCMan; Removing &#8220;Download&#8221;, &#8220;View&#8221; & &#8220;Details&#8221; Buttons</a></h1>
+    
+    
+      <p class="meta">
+        
 
-<p>I decided to check under Active Directory and i found out that my new computers and others that where not showing up in the WSUS console where on the wrong container.</p>
 
-<p>[caption id=&ldquo;attachment_214&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;595&rdquo; caption=&ldquo;Active Directory Containers &rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/06/Active_Directory.png"><img class="size-full wp-image-214" title="Active Directory Containers " src="http://d87studios.com/blog/wp-content/uploads/2011/06/Active_Directory.png" alt="Active Directory Containers " width="595" height="518" /></a>[/caption]</p>
 
-<p>My new computer was in the &ldquo;Computers&rdquo; container and after moving it to our &ldquo;default&rdquo; container where the original policy was set, i was able to see the computer on WSUS console.</p>
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-13T16:32:24-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Go to <strong>/components/com_docman/themes/default/templates/documents/tasks.tpl.php</strong></p>
+
+<p>Replace everything on line 37 and below with this code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">foreach</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">doc</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">buttons</span> <span class="k">as</span> <span class="nv">$button</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="nv">$popup</span> <span class="o">=</span> <span class="p">(</span><span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">params</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;popup&#39;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span> <span class="o">?</span> <span class="s1">&#39;type=&quot;popup&quot;&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="nv">$attr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="k">if</span><span class="p">(</span><span class="nv">$class</span> <span class="o">=</span> <span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">params</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'><span class="nv">$attr</span> <span class="o">=</span> <span class="s1">&#39;class=&quot;&#39;</span> <span class="o">.</span> <span class="nv">$class</span> <span class="o">.</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="nv">$skip</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&quot;Download&quot;</span><span class="p">,</span><span class="s2">&quot;View&quot;</span><span class="p">,</span><span class="s2">&quot;Details&quot;</span><span class="p">);</span><span class="err"> </span> <span class="c1">// &amp;lt;-- add list of buttons</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="nb">in_array</span><span class="p">(</span><span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">text</span><span class="p">,</span><span class="nv">$skip</span><span class="p">))</span> <span class="k">CONTINUE</span><span class="p">;</span> <span class="c1">// &amp;lt;-- skip &quot;echo&quot; if in list    ?&amp;gt;&amp;lt;li &amp;lt;?php echo $attr?&amp;gt;&amp;gt;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/&amp;lt;?php echo </span><span class="si">$button</span><span class="s2">-&amp;gt;link?&amp;gt;&quot;</span> <span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$popup</span><span class="o">?&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$button</span><span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="nx">text</span> <span class="o">?&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">/</span><span class="nx">a</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span>
+</span><span class='line'><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">/</span><span class="nx">li</span><span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">?</span><span class="nx">php</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>&nbsp;</p>
 
-<p><em>Please note that by default AD has the &ldquo;Computers&rdquo; container set and some organizations might create other containers for several reasons. In my case AD was set before i was hired, you might run into the similar issue if you have the related scenario.</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/02/joomla-upgrade-jupgrade-stuck/">Joomla Upgrade. jUpgrade Stuck</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-02T14:42:14-04:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p style="text-align: left;">When upgrading from Joomla 1.5.X to 1.6 i ran through an issue with jUpgrade. It seem like it was always getting stuck in the Downloading process. After restarting the process different times with different variables, i still could not get past the Downloading step. So i figure i check the Parameters settings, there i was able to disable the Download process. After changing the setting i restarted the upgrade process and it work correctly.</p>
-
-
-
-
-<div class="mceTemp" style="text-align: left;"><dl id="attachment_189" class="wp-caption alignleft" style="width: 493px;"> <dt class="wp-caption-dt"><a href="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_upgrade.png"><img class="size-full wp-image-189" title="joomla_upgrade_stuck" src="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_upgrade.png" alt="jUpgrade is stuck in Downloading" width="483" height="252" /></a></dt> <dd class="wp-caption-dd">jUpgrade is stuck in Downloading </dd> </dl></div>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p class="wp-caption" style="text-align: left;"><em>Please Note: Before we start, make sure you have the <strong>System - Mootools Upgrade </strong>module enable. This is usually the main reason many upgrades have failed.</em></p>
-
-
-<p style="text-align: left;">If your Mootools Upgrade module is enable and jUpgrade keeps getting stuck, then try the following:</p>
-
-
-<p style="text-align: left;">Go to your Components and click on jUpgrade. Click on the Parameters button. Looks like this: <img class="size-full wp-image-190 alignnone" style="border: 1px solid black;" title="joomla_parameters" src="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_parameters.png" alt="" width="63" height="48" /></p>
-
-
-<p style="text-align: left;">Disable the Downloading step by selecting <em>YES </em>in the <strong>Skip Download </strong>setting.</p>
-
-
-
-
-<div class="mceTemp" style="text-align: left;"><dl id="attachment_191" class="wp-caption alignnone" style="width: 573px;"> <dt class="wp-caption-dt"><a href="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_jupgrade_settings.png"><img class="size-full wp-image-191 " title="joomla_jupgrade_settings" src="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_jupgrade_settings.png" alt="jUpgrade Skip Download" width="563" height="228" /></a></dt> <dd class="wp-caption-dd">jUpgrade Skip Download</dd> </dl></div>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">Now retry the upgrade and at the end you should see this screen:</p>
-
-
-
-
-<div class="mceTemp" style="text-align: left;"><dl id="attachment_192" class="wp-caption alignnone" style="width: 480px;"> <dt class="wp-caption-dt"><a href="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_upgrade_done.png"><img class="size-full wp-image-192 " title="joomla_upgrade_done" src="http://d87studios.com/blog/wp-content/uploads/2011/06/joomla_upgrade_done.png" alt="Joomla Upgrade Done!" width="470" height="122" /></a></dt> <dd class="wp-caption-dd">Joomla Upgrade Done!</dd> </dl></div>
-
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">If you still can&#8217;t get pass the download step, you might new to download the upgrade file yourself and upload it in the temp folder located in your Joomla directory.</p>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/25/get-email-notifications-when-excel-workbook-has-been-amended/">Get Email Notifications When Excel Workbook Has Been Amended.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T14:23:02-04:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently I ran across a situation where i had an Excel workbook that was on a shared drive, this file would get updated by different employees on any given time of the day. I need it a way to alert someone in management every time this file was amended. This was my solution:</p>
-
-<pre>Private Sub Workbook_BeforeSave(ByVal SaveAsUI As Boolean, Cancel As Boolean)
-    Dim OutApp As Object
-    Dim OutMail As Object
-    Const SendTo As String = "<span style="color: #3366ff;">davidy@Initech.com</span>"
-
-    Set OutApp = CreateObject("Outlook.Application")
-
-    OutApp.Session.Logon
-    Set OutMail = OutApp.CreateItem(0)
-
-    With OutMail
-        .To = SendTo
-        .Subject = ThisWorkbook.Name &amp; " has been amended"
-        .Body = " <span style="color: #3366ff;">The Workbook has been updated</span>!"
-        .Send
-    End With
-
-    Set OutMail = Nothing
-    Set OutApp = Nothing
-End Sub</pre>
-
-
-<p>This Visual basic code sends an email via Outlook every time the workbook has been updated. For this code to fully work you will need to edit your macro settings in Excel.</p>
-
-<h2>Edit Macro Security Settings:</h2>
-
-
-<p><strong>Office 2003</strong> &ndash; Tools &gt; Macro &gt; Security.
-<strong>Office 2007</strong> &ndash; Click the Microsoft Office Button , and then click Excel Options. In the Trust Center category, click Trust Center Settings, and then click the Macro Settings category.</p>
-
-<p>[caption id=&ldquo;attachment_155&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo; caption=&ldquo;Macro Security in Excel 2003&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/05/macro_security.png"><img class="size-medium wp-image-155" title="macro_security_2003" src="http://d87studios.com/blog/wp-content/uploads/2011/05/macro_security-300x292.png" alt="Macro Security in Excel 2003" width="300" height="292" /></a>[/caption]</p>
-
-<p>To make this VB code work correctly, you will need to set your Macro Security level to Medium or lower.</p>
-
-<h2>Inserting the Code:</h2>
-
-
-<p>Simply right click on the worksheet tab and click View Code. This will open the Microsoft Visual Basic screen.</p>
-
-<p>[caption id=&ldquo;attachment_157&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;300&rdquo; caption=&ldquo;Click View Code to open the Microsoft Visual Basic screen&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/05/excel_viewcode.png"><img class="size-medium wp-image-157" title="excel_viewcode_2003" src="http://d87studios.com/blog/wp-content/uploads/2011/05/excel_viewcode-300x231.png" alt="Click View Code to open the Microsoft Visual Basic screen" width="300" height="231" /></a>[/caption]</p>
-
-<p>Once you have the Microsoft VB screen open you can paste the code and begin editing it.</p>
-
-<p style="text-align: center;">&nbsp;</p>
-
-
-<p>[caption id=&ldquo;attachment_159&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;620&rdquo; caption=&ldquo;A view of the Microsoft Visual Basic screen&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2011/05/workbook_code.png"><img class="size-large wp-image-159" title="workbook_code" src="http://d87studios.com/blog/wp-content/uploads/2011/05/workbook_code-1024x571.png" alt="A view of the Microsoft Visual Basic screen" width="620" height="345" /></a>[/caption]</p>
-
-<p style="text-align: left;">&nbsp;</p>
-
-
-<p style="text-align: left;">Don&#8217;t forget to add your email address and if you would like to, you can customized the message that would be display on the body of the email. Just look at the highlighted parts on the picture above.</p>
-
-
-<p style="text-align: left;"><em>If you have any questions feel free to leave a comment below.</em></p>
-
-
-<p style="text-align: center;">&nbsp;</p>
+<p>You might also want to remove that annoying white space left off. To do this go to:</p>
+
+<p><strong>/components/com_docman/themes/default/css/theme.css</strong></p>
+
+<p>Replace line 177-185 with this:</p>
+
+<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;">.dm_taskbar {</span></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">height</span><span class="o">:</span> <span class="nt">0px</span><span class="o">;</span>
+</span><span class='line'><span class="nt">padding-bottom</span><span class="nd">:0px</span><span class="o">;</span>
+</span><span class='line'><span class="nt">margin-bottom</span><span class="nd">:0px</span><span class="o">;</span>
+</span><span class='line'><span class="c">/*border-bottom: 1px solid #bbb;*/</span>
+</span><span class='line'><span class="nt">font-family</span><span class="o">:</span> <span class="nt">arial</span><span class="o">;</span>
+</span><span class='line'><span class="nt">list-style-type</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+</span><span class='line'><span class="err">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -592,8 +485,6 @@ End Sub</pre>
     </article>
   
   <div class="pagination">
-    
-      <a class="prev" href="/blog/page/7/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -612,10 +503,6 @@ End Sub</pre>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
       </li>
     
@@ -625,6 +512,10 @@ End Sub</pre>
     
       <li class="post">
         <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/temporarily-disable-puppet/">Temporarily Disable Puppet</a>
       </li>
     
   </ul>

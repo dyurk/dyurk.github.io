@@ -9,7 +9,13 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="To add new users for the web interface of Nagios you will need to run the following command: # htpasswd /usr/local/nagios/etc/htpasswd.users &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+5
+&lt;VirtualHost *:80&gt; ServerAlias * RewriteEngine On RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
+&lt;/VirtualHost&gt; ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,7 +77,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/04/04/adding-new-users-in-nagios/">Adding New Users in Nagios</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a></h1>
     
     
       <p class="meta">
@@ -87,204 +93,24 @@
   
 
 
-<time datetime="2012-04-04T18:21:33-04:00" pubdate data-updated="true">Apr 4<span>th</span>, 2012</time>
+<time datetime="2012-03-13T13:57:54-04:00" pubdate data-updated="true">Mar 13<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To add new users for the web interface of Nagios you will need to run the following command:</p>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;VirtualHost *:80&gt;
+</span><span class='line'>       ServerAlias *
+</span><span class='line'>       RewriteEngine On
+</span><span class='line'>       RewriteRule ^(.*)$ https://%{HTTP_HOST}$1 [redirect=301]
+</span><span class='line'>&lt;/VirtualHost&gt;</span></code></pre></td></tr></table></div></figure>
 
-<pre># htpasswd /usr/local/nagios/etc/htpasswd.users username01</pre>
-
-
-<p>Where &ldquo;username01&rdquo; is, type the name of the user you are trying to add. It will later prompt you for a password.</p>
-
-<p>You will also need to edit your cgi configuration file.</p>
-
-<pre>authorized_for_system_commands=nagiosadmin,username01</pre>
-
-
-<pre>authorized_for_all_services=nagiosadmin,username01</pre>
-
-
-<pre>authorized_for_all_hosts=nagiosadmin,username01</pre>
-
-
-<pre>authorized_for_all_service_commands=nagiosadmin,username01</pre>
-
-
-<pre>authorized_for_all_host_commands=nagiosadmin,username01</pre>
-
-
-<p>Careful when editing the cgi config file. For security reasons you might not want to give full access to every user.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/03/nagios-error-return-code-of-127-is-out-of-bounds-plugin-may-be-missing/">Nagios Error: “Return Code of 127 Is Out of Bounds – Plugin May Be Missing”</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-03T13:12:04-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are monitoring network devices in Nagios and you get the following error:</p>
-
-<address><strong> “Return code of 127 is out of bounds – plugin may be missing” </strong></address>
-
-
-<p>Most likely you are missing some SNMP packages. Make sure you have the following:</p>
-
-<pre>net-snmp-libs-x.x.x
-net-snmp-x.x.x
-net-snmp-utils-x.x.x</pre>
-
-
-<p>Run this command to make sure that you don&rsquo;t have them:</p>
-
-<p>For RHEL\CentOS\Fedora:</p>
-
-<pre>rpm -qa | grep net-snmp</pre>
-
-
-<p>For Debian based distros:</p>
-
-<pre>dpkg --get-selections | grep net-snmp</pre>
-
-
-<p>If the command does not return anything, then you are missing all three packages. Proceed to install them using your package manager.</p>
-
-<p>After you are done verify that the packages are installed:</p>
-
-<pre># rpm -qa | grep net-snmp
- net-snmp-libs-5.5-37.el6_2.1.i686
- net-snmp-5.5-37.el6_2.1.i686
- net-snmp-utils-5.5-37.el6_2.1.i686</pre>
-
-
-<p>One last step. You will need to stop Nagios to recompile and re-install the Nagios Plug-ins.</p>
-
-<p>Go to the folder where the plug-ins are downloaded.</p>
-
-<pre> /configure --with-nagios-user=nagios --with-nagios-group=nagios</pre>
-
-
-<pre> Make</pre>
-
-
-<pre> Make Install</pre>
-
-
-<pre> service nagios start</pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/02/make-command-not-found-in-centos/">Make Command Not Found in CentOS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-02T14:45:43-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are getting this error, you will need to install the gcc automake. Type the following command:</p>
-
-<pre>yum -y install gcc automake autoconf libtool make</pre>
-
-
-<p>That&rsquo;s it!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/29/running-an-application-as-administrator/">Running an Application as Administrator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-29T12:27:34-04:00" pubdate data-updated="true">Mar 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you find yourself working on a computer that is locked down and are in need of doing some tasks that required administrative privileges, the following command might be helpful. This can be done directly from the &ldquo;RUN&rdquo; command window.</p>
-
-<pre>runas /user:<span style="background-color: #ffff00;">Domain\Admin</span> "<span style="background-color: #ccffff;">C:\WINDOWS\explorer.exe</span> /separate"</pre>
-
-
-<p>Replace the yellow highlighted text with your own credentials. The credentials can be for a domain or a local admin user. The light-blue text represents the application you are trying to run with elevated rights.</p>
 </div>
   
   
@@ -327,7 +153,7 @@ net-snmp-utils-x.x.x</pre>
 <h2>DISM Command</h2>
 
 
-<p>[caption id=&ldquo;attachment_435&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;677&rdquo; caption=&ldquo;dism command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png"><img class="size-full wp-image-435" title="dism" src="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png" alt="" width="677" height="342" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png"><img class="size-full wp-image-435" title="dism" src="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png" alt="" width="677" height="342" /></a></p>
 
 <p>There are many switches when running this command and is recommended that you look into all the options in the <a href="http://technet.microsoft.com/en-us/library/dd744382(v=ws.10).aspx" target="_blank">Microsoft manual</a>. For the most part the command should look like this:</p>
 
@@ -374,7 +200,7 @@ net-snmp-utils-x.x.x</pre>
   </header>
 
 
-  <div class="entry-content"><p>[caption id=&ldquo;attachment_430&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;552&rdquo; caption=&ldquo;Symantec Enpoint Manager&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a>[/caption]</p>
+  <div class="entry-content"><p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
 
 <p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>
 
@@ -391,7 +217,7 @@ net-snmp-utils-x.x.x</pre>
 </ol>
 
 
-<p>[caption id=&ldquo;attachment_429&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;417&rdquo; caption=&ldquo;Symantec Endpoint Protection Manager password reset&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a></p>
 </div>
   
   
@@ -436,7 +262,7 @@ net-snmp-utils-x.x.x</pre>
 <pre>adprep /forestprep</pre>
 
 
-<p>[caption id=&ldquo;attachment_421&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;699&rdquo; caption=&ldquo;adprep command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a></p>
 
 <p>&nbsp;</p>
 
@@ -445,7 +271,7 @@ net-snmp-utils-x.x.x</pre>
 <pre>adprep /domainprep /gpprep</pre>
 
 
-<p>[caption id=&ldquo;attachment_422&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;703&rdquo; caption=&ldquo;domainprep command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a></p>
 </div>
   
   
@@ -573,7 +399,7 @@ net-snmp-utils-x.x.x</pre>
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2011/12/19/396/">396</a></h1>
+      <h1 class="entry-title"><a href="/blog/2011/12/19/bookmarks/">Bookmarks</a></h1>
     
     
       <p class="meta">
@@ -589,14 +415,286 @@ net-snmp-utils-x.x.x</pre>
   
 
 
-<time datetime="2011-12-19T15:56:58-05:00" pubdate data-updated="true">Dec 19<span>th</span>, 2011</time>
+<time datetime="2011-12-19T15:56:57-05:00" pubdate data-updated="true">Dec 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><h3>Learning Resources</h3>
+
+
+<p><a href="http://www.rfc-editor.org/search/rfc_search.php"><a href="http://www.rfc-editor.org/search/rfc_search.php">http://www.rfc-editor.org/search/rfc_search.php</a></a> [<b>Request for Comments</b> (<b>RFC</b>) search]</p>
+
+<p><a href="https://access.redhat.com/knowledge/docs/Red_Hat_Enterprise_Linux/"><a href="https://access.redhat.com/knowledge/docs/Red_Hat_Enterprise_Linux/">https://access.redhat.com/knowledge/docs/Red_Hat_Enterprise_Linux/</a></a></p>
+
+<p><a href="http://www.technoblogical.com/"><a href="http://www.technoblogical.com/">http://www.technoblogical.com/</a></a> [Videos]</p>
+
+<p><a href="http://networkingprogramming.com/1024x768/index.html"><a href="http://networkingprogramming.com/1024x768/index.html">http://networkingprogramming.com/1024x768/index.html</a></a> [Videos]</p>
+
+<p><a href="http://www.khanacademy.org/#computer-science"><a href="http://www.khanacademy.org/#computer-science">http://www.khanacademy.org/#computer-science</a></a></p>
+
+<p><a href="http://ocw.mit.edu/index.htm"><a href="http://ocw.mit.edu/index.htm">http://ocw.mit.edu/index.htm</a></a></p>
+
+<p><a href="http://packetlife.net/library/cheat-sheets/"><a href="http://packetlife.net/library/cheat-sheets/">http://packetlife.net/library/cheat-sheets/</a></a></p>
+
+<p><a title="http://simple.wikipedia.org/wiki/Category:Computing" href="http://simple.wikipedia.org/wiki/Category:Computing"><a href="http://simple.wikipedia.org/wiki/Category:Computing">http://simple.wikipedia.org/wiki/Category:Computing</a></a></p>
+
+<p><a href="http://www.cs.cmu.edu/~garth/RAIDpaper/Patterson88.pdf"><a href="http://www.cs.cmu.edu/~garth/RAIDpaper/Patterson88.pdf">http://www.cs.cmu.edu/~garth/RAIDpaper/Patterson88.pdf</a></a> [RAID]</p>
+
+<h3>Work-related</h3>
+
+
+<p><a href="http://www.microsoft.com/technet/support/ee/ee_basic.aspx"><a href="http://www.microsoft.com/technet/support/ee/ee_basic.aspx">http://www.microsoft.com/technet/support/ee/ee_basic.aspx</a></a> [event log search]</p>
+
+<p><a href="http://kb.iu.edu/index.cgi"><a href="http://kb.iu.edu/index.cgi">http://kb.iu.edu/index.cgi</a></a> [IU IT Knowledge Base]</p>
+
+<p><a href="http://www.eventid.net/search.asp"><a href="http://www.eventid.net/search.asp">http://www.eventid.net/search.asp</a></a> [event log search]</p>
+
+<p><a href="http://www.phenoelit-us.org/dpl/dpl.html"><a href="http://www.phenoelit-us.org/dpl/dpl.html">http://www.phenoelit-us.org/dpl/dpl.html</a></a> [password list]</p>
+
+<p><a href="http://ninite.com/"><a href="http://ninite.com/">http://ninite.com/</a></a></p>
+
+<p><a href="http://www.drivesnapshot.de/en/index.htm"><a href="http://www.drivesnapshot.de/en/index.htm">http://www.drivesnapshot.de/en/index.htm</a></a></p>
+
+<p><a href="http://www.wisesoft.co.uk/scripts/default.aspx"><a href="http://www.wisesoft.co.uk/scripts/default.aspx">http://www.wisesoft.co.uk/scripts/default.aspx</a></a></p>
+
+<h3>Personal &amp; Reading, Misc.</h3>
+
+
+<p><a href="http://fuelmyroute.com/"><a href="http://fuelmyroute.com/">http://fuelmyroute.com/</a></a></p>
+
+<p><a href="http://securepla.net/rss.php"><a href="http://securepla.net/rss.php">http://securepla.net/rss.php</a></a></p>
+
+<p><a href="http://www.broadbandmap.gov/"><a href="http://www.broadbandmap.gov/">http://www.broadbandmap.gov/</a></a></p>
+
+<p><a href="ftp://ftp.usf.edu/pub/ubuntu-releases"><a href="ftp://ftp.usf.edu/pub/ubuntu-releases">ftp://ftp.usf.edu/pub/ubuntu-releases</a></a> [USF Ubuntu mirror]</p>
+
+<p><a href="http://projects.nytimes.com/census/2010/explorer"><a href="http://projects.nytimes.com/census/2010/explorer">http://projects.nytimes.com/census/2010/explorer</a></a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/21/mysql-the-description-for-event-id-in-source-cannot-be-found/">MySQL: The Description for Event ID in Source Cannot Be Found.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-21T15:37:35-04:00" pubdate data-updated="true">Oct 21<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you keep getting this error in the Event Viewer you should do the following:</p>
+
+<p class="wp-caption">The description for Event ID ( 100 ) in Source ( MySQL ) cannot be found</p>
+
+
+<p>It seems like the local computer may not have the necessary registry information or message DLL files to display messages from a remote computer. We will have to use a program to edit the <strong>mysqld.exe </strong>to add the required information.</p>
+
+<ul>
+    <li>Download XN Resource Editor - <a href="http://www.wilsonc.demon.co.uk/d10resourceeditor.htm">http://www.wilsonc.demon.co.uk/d10resourceeditor.htm</a></li>
+</ul>
+
+
+<ul>
+    <li>Stop the MySql server.</li>
+</ul>
+
+
+<ul>
+    <li>Locate and backup <strong>mysqld.exe - \</strong>MySQL Server\bin\mysqld.exe    <span style="color: #ff0000;"><em>Make sure to backup!!!!</em></span></li>
+</ul>
+
+
+<ul>
+    <li>In XN Resource Editor open mysqld.exe and you should see both panes blank.</li>
+</ul>
+
+
+<ul>
+    <li>From the menu select <strong>Resource, </strong>and then <strong>Add Resource. </strong>A window will open with a list of options, select <strong>Message Table.</strong></li>
+</ul>
+
+
+<div>
+
+<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png"><img class="size-full wp-image-375" title="mysqld.exe XN Resource Editor" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql-e1319210020404.png" alt="mysqld.exe XN Resource Editor" width="581" height="493" /></a>
+
+&nbsp;
+
+</div>
+
+
+<ul>
+    <li>Right click on &#8220;Language Natural&#8221; and click on <strong>Properties. </strong>A window will open, change the Language option to <strong>English (United States)</strong>.</li>
+</ul>
+
+
+<div>
+
+<a href="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png"><img class="size-full wp-image-378" title="Resource Properties" src="http://d87studios.com/blog/wp-content/uploads/2011/10/mysql01.png" alt="Resource Properties" width="320" height="161" /></a>
+
+</div>
+
+
+<p>&nbsp;
+From the menu select <strong>Strings, </strong>and then <strong>Add String. </strong>It will create a default string with a 00000001 id.</p>
+
+<p>Change the ID from &#8217;00000001&#8217; to:</p>
+
+<pre> 'C0000064'</pre>
+
+
+<p>Now Save and exit. Start MySql server now.</p>
+
+<div>That should do it. From now on you should see all the actual event messages in the Event Viewer.</div>
+
+
+<div>Source: <a href="http://bugs.mysql.com/bug.php?id=48042">http://bugs.mysql.com/bug.php?id=48042</a></div>
+
+
+<div></div>
+
+
+<div></div>
+
+
+<div></div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/18/terminal-service-printers-do-not-keep-local-settings/">Terminal Service Printers Do Not Keep Local Settings.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-18T16:07:15-04:00" pubdate data-updated="true">Aug 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>The Problem:</h3>
+
+
+<p>When you start a Terminal Services session with a local printer, a redirected print queue is created in the Terminal Services session. All of your settings should be transfer over to the redirected printer, but that is not the case all the time. Some printing models do not support detecting changes to the Device Settings tab for each redirected printer.</p>
+
+<h3>The Solution:</h3>
+
+
+<p>The solution is to make the desired change in the Device Settings tab and then change a different setting in another tab, then hit Apply. This is all done inside the terminal session.</p>
+
+<p>Source: <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942"><a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942">http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942</a></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/02/david-yurkiewicz/">About Me</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-02T19:55:45-04:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://dyurk.com/wp-content/uploads/2011/08/david.jpg"><img class="size-medium wp-image-352" title="David Yurkiewicz" alt="David Yurkiewicz" src="http://dyurk.com/wp-content/uploads/2011/08/david-300x300.jpg" width="300" height="300" /></a></p>
+
+<h1>David Yurkiewicz</h1>
+
+
+<p><em>Web Operations Engineer aka Systems administrator currently working at Etsy. Mostly focused on open source web technologies.</em></p>
+
+<p>David Yurkiewicz is a Web Operations Engineer at Etsy&rsquo;s Infrastructure and Operations team. From IT Admin, sole systems administrator to WebOps engineer, David is a firm believer in automation and in working smarter and not harder. An advocate for open source software and web solutions. He enjoys graphs, metrics and anything that tells a story about the systems he is managing.</p>
+
+<h4>About the blog:</h4>
+
+
+<p>I&rsquo;ve had the privilege of doing systems administration for quite some time now and I decided that it would be great to have a blog to share some tips, quick notes, wins and failures. Occasionally, there might be some rants and I might even go off topic, but I will try to add an educational value to each post. We should be learning something new each day!<em>  </em></p>
+
+<p><span style="line-height: 1.5em;">Please fell free to communicate with me! Follow me @d87tech or click on the contact page. </span></p>
+
+<h4>More on me:</h4>
+
+
+<p><a href="http://www.linkedin.com/in/davidyurkiewicz"><img alt="View David Yurkiewicz's profile on LinkedIn" src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" /></a></p>
+
+<p><strong>My Resume:</strong></p>
+
+<p><a title="Resume" href="http://cvmkr.com/QWGN" target="_blank">Resume</a></p>
 </div>
   
   
@@ -625,10 +723,6 @@ net-snmp-utils-x.x.x</pre>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/13/redirect-all-http-request-to-https/">Redirect All HTTP Request to HTTPS</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
       </li>
     
@@ -638,6 +732,10 @@ net-snmp-utils-x.x.x</pre>
     
       <li class="post">
         <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/20/temporarily-disable-puppet/">Temporarily Disable Puppet</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -20,8 +20,7 @@
     <id>http://dyurk.github.io/blog/2011/05/13/force-ota-update-check-on-t-mobile-g2</id>
     <content type="html"><![CDATA[<p>To force OTA update checking on the T-mobile G2 type the following in the dialer:</p>
 
-<blockquote><strong>*#*#checkin#*#*</strong></blockquote>
-
+<p><strong><em>#</em>#checkin#<em>#</em></strong></p>
 ]]></content>
   </entry>
   

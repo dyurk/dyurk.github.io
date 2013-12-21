@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Windows | My Octopress Blog]]></title>
   <link href="http://dyurk.github.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T16:49:44-05:00</updated>
+  <updated>2013-12-21T18:48:29-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -30,32 +30,26 @@
 
 <p><strong> Select to Browse my computer for driver</strong></p>
 
-<p>[caption id=&ldquo;attachment_486&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;570&rdquo; caption=&ldquo;Select to Browse my computer for driver&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x1.png"><img class="size-full wp-image-486" title="Select to Browse my computer for driver" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x1.png" alt="" width="570" height="308" /></a>[/caption]</p>
+<p><img class="size-full wp-image-486" title="Select to Browse my computer for driver" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x1.png" alt="" width="570" height="308" /></a></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Select to pick from a list of device drivers. From the list, select &ldquo;Network Adapters&rdquo;.</strong></p>
 
-<p>[caption id=&ldquo;attachment_487&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;542&rdquo; caption=&ldquo;Select to pick from a list of device drivers&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x2.png"><img class="size-full wp-image-487" title="Select to pick from a list of device drivers" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x2.png" alt="" width="542" height="311" /></a>[/caption]</p>
+<p><img class="size-full wp-image-487" title="Select to pick from a list of device drivers" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x2.png" alt="" width="542" height="311" /></a></p>
 
 <p style="text-align: left;"><strong>Select the downloaded driver from disk</strong></p>
 
 
-<p>[caption id=&ldquo;attachment_488&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;597&rdquo; caption=&ldquo;Select the downloaded driver from disk&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x3.png"><img class="size-full wp-image-488" title="Select the downloaded driver from disk" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x3.png" alt="" width="597" height="338" /></a>[/caption]</p>
+<p><img class="size-full wp-image-488" title="Select the downloaded driver from disk" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x3.png" alt="" width="597" height="338" /></a></p>
 
 <p>&nbsp;</p>
 
 <p><strong>Select Ralink Technology Corp. &amp; RT2500 USB Wireless LAN Driver </strong></p>
 
-<p>[caption id=&ldquo;attachment_489&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;591&rdquo; caption=&ldquo;Select Ralink Technology Corp. &amp; RT2500 USB Wireless LAN Driver&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x4.png"><img class="size-full wp-image-489" title="Select Ralink Technology Corp. &amp; RT2500 USB Wireless LAN Driver" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x4.png" alt="" width="591" height="322" /></a>[/caption]</p>
-
-<p>&nbsp;</p>
+<p><img class="size-full wp-image-489" title="Select Ralink Technology Corp. &amp; RT2500 USB Wireless LAN Driver" src="http://d87studios.com/blog/wp-content/uploads/2012/05/WUSB54g_64x4.png" alt="" width="591" height="322" /></a></p>
 
 <p><strong>Click  Next, and Finish. The driver should now be installed on your system.</strong></p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
 <p><em>Or you can just install Ubuntu Linux&hellip;  :-D </em></p>
 ]]></content>
@@ -87,7 +81,7 @@
 <h2>DISM Command</h2>
 
 
-<p>[caption id=&ldquo;attachment_435&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;677&rdquo; caption=&ldquo;dism command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png"><img class="size-full wp-image-435" title="dism" src="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png" alt="" width="677" height="342" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png"><img class="size-full wp-image-435" title="dism" src="http://d87studios.com/blog/wp-content/uploads/2012/03/dism.png" alt="" width="677" height="342" /></a></p>
 
 <p>There are many switches when running this command and is recommended that you look into all the options in the <a href="http://technet.microsoft.com/en-us/library/dd744382(v=ws.10).aspx" target="_blank">Microsoft manual</a>. For the most part the command should look like this:</p>
 
@@ -107,7 +101,7 @@
     <link href="http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
     <id>http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
-    <content type="html"><![CDATA[<p>[caption id=&ldquo;attachment_430&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;552&rdquo; caption=&ldquo;Symantec Enpoint Manager&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a>[/caption]</p>
+    <content type="html"><![CDATA[<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
 
 <p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>
 
@@ -124,7 +118,7 @@
 </ol>
 
 
-<p>[caption id=&ldquo;attachment_429&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;417&rdquo; caption=&ldquo;Symantec Endpoint Protection Manager password reset&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png"><img class="size-full wp-image-429" title="symantec_reset_pass" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_reset_pass.png" alt="" width="417" height="267" /></a></p>
 ]]></content>
   </entry>
   
@@ -142,7 +136,7 @@
 <pre>adprep /forestprep</pre>
 
 
-<p>[caption id=&ldquo;attachment_421&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;699&rdquo; caption=&ldquo;adprep command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png"><img class="size-full wp-image-421" title="adprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08.png" alt="" width="699" height="348" /></a></p>
 
 <p>&nbsp;</p>
 
@@ -151,7 +145,7 @@
 <pre>adprep /domainprep /gpprep</pre>
 
 
-<p>[caption id=&ldquo;attachment_422&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;703&rdquo; caption=&ldquo;domainprep command&rdquo;]<a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a>[/caption]</p>
+<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png"><img class="size-full wp-image-422" title="domainprep" src="http://d87studios.com/blog/wp-content/uploads/2012/03/upgrade_03-08_1.png" alt="" width="703" height="349" /></a></p>
 ]]></content>
   </entry>
   
