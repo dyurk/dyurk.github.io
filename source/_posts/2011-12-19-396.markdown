@@ -1,0 +1,15 @@
+---
+layout: nav_menu_item
+status: publish
+published: true
+author: David Yurkiewicz
+author_login: admin
+author_email: david.yurkiewicz@gmail.com
+wordpress_id: 396
+wordpress_url: http://d87studios.com/blog/2011/12/396/
+date: 2011-12-19 15:56:58.000000000 -05:00
+categories: []
+tags: []
+comments: []
+---
+ 

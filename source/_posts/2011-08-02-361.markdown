@@ -1,0 +1,15 @@
+---
+layout: nav_menu_item
+status: publish
+published: true
+author: David Yurkiewicz
+author_login: admin
+author_email: david.yurkiewicz@gmail.com
+wordpress_id: 361
+wordpress_url: http://d87studios.com/blog/?p=361
+date: 2011-08-02 19:57:18.000000000 -04:00
+categories: []
+tags: []
+comments: []
+---
+[caption id="attachment_352" align="alignleft" width="300" caption="David Yurkiewicz"][/caption] Introduction: Hello my name is David Yurkiewicz, I’m a full time System & Network Administrator, IT Support specialist, IT professional and a part-time blogger. I have worked with a wide range of operating and hardware systems throughout my life. I been blessed to be working in the IT environment through out my whole career and i have no regrets, this is my passion. The main reason for this blog is to document past issues for myself and other Sysadmins and IT professionals. I also hope to reach out and network with other great professionals in and around the IT environment. Please fell free to communicate with me! To contact me check out my contact page on the “Contact Me” link.  
