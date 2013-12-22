@@ -6,8 +6,6 @@ title: About Me
 author: David Yurkiewicz
 author_login: admin
 author_email: david.yurkiewicz@gmail.com
-wordpress_id: 179
-wordpress_url: http://d87studios.com/blog/?page_id=179
 date: 2011-08-02 19:55:45.000000000 -04:00
 categories: []
 tags: []
