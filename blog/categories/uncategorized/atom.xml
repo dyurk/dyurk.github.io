@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Uncategorized | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Uncategorized | DYURK | David Yurkiewicz]]></title>
   <link href="http://dyurk.github.io/blog/categories/uncategorized/atom.xml" rel="self"/>
   <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-21T18:48:29-05:00</updated>
+  <updated>2013-12-21T20:44:49-05:00</updated>
   <id>http://dyurk.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[David Yurkiewicz]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
