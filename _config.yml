@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://dyurk.github.io
+url: http://www.dyurk.com
 title: DYURK | David Yurkiewicz
 subtitle: A blog about WebOps, Sysadmin and Technology.
 author: David Yurkiewicz
@@ -94,7 +94,7 @@ disqus_short_name: d87tech
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-46694120-1
 
 # Facebook Like
 facebook_like: false
