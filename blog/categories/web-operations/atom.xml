@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Web Operations | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/web-operations/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/web-operations/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues/"/>
     <updated>2013-03-26T13:35:01-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <id>http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues</id>
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
@@ -65,9 +65,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Apache Proxy Example]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/12/apache-proxy-example/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/12/apache-proxy-example/"/>
     <updated>2013-03-12T16:58:56-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/12/apache-proxy-example</id>
+    <id>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
 <p>```
@@ -101,9 +101,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Cisco Catalyst 2960 - Notes]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
     <updated>2013-03-06T03:07:46-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes</id>
+    <id>http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes</id>
     <content type="html"><![CDATA[<h2>VLAN</h2>
 
 
@@ -209,9 +209,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
     <updated>2013-02-20T22:08:22-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
     <content type="html"><![CDATA[<p>The server&rsquo;s default <a href="http://dev.mysql.com/doc/refman/5.5/en//server-system-variables.html#sysvar_max_allowed_packet"><code>max_allowed_packet</code></a> value is 1MB and it looks like it has exceeded the default max. You can increase this if the server needs to handle big queries. This can be done in two ways:</p>
 
 <p>Start MySQL client with the following option (64 MB for this example)</p>
@@ -228,9 +228,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet/"/>
     <updated>2013-02-20T21:26:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet</id>
     <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
 
 <pre># puppet agent --disable "Reason why disabled"</pre>

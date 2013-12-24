@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Uncategorized | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/uncategorized/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/uncategorized/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
     <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
 
 <p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[Su Apache: "This Account Is Currently Not Available"]]></title>
-    <link href="http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available/"/>
+    <link href="http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available/"/>
     <updated>2012-09-11T16:04:27-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available</id>
+    <id>http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available</id>
     <content type="html"><![CDATA[<p>When trying to switch user to apache and you get the following: "This account is currently not available". You need to set a shell for the apache user. Let&rsquo;s say we want to use bash.</p>
 
 <pre># chsh -s /bin/bash apache
@@ -60,9 +60,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Chmod Directories and Files Separately]]></title>
-    <link href="http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files/"/>
+    <link href="http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files/"/>
     <updated>2012-07-10T01:28:42-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files</id>
+    <id>http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files</id>
     <content type="html"><![CDATA[<p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
 
 <p>For Directories:</p>
@@ -79,9 +79,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu Apps Open Folders Instead of Documents Fix]]></title>
-    <link href="http://dyurk.github.io/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/"/>
+    <link href="http://www.dyurk.com/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/"/>
     <updated>2012-06-22T17:10:14-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix</id>
+    <id>http://www.dyurk.com/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix</id>
     <content type="html"><![CDATA[<p>Recently after trying out Xfce I started to have issues with one of my go-to apps, Gnome Do. It would only open the directory of the file that i was trying to open. This also happen with Chrome, were downloaded files would not open, only their directory. The issue seems to be releated to some of the utilities that come with Xfec. This should do it:</p>
 
 <pre lang="shell" prompt="$">sudo apt-get remove exo-utils</pre>
@@ -91,9 +91,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
+    <id>http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
     <content type="html"><![CDATA[<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
 
 <p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>

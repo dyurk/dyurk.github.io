@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues/"/>
     <updated>2013-03-26T13:35:01-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <id>http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues</id>
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
@@ -74,9 +74,9 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   
   <entry>
     <title type="html"><![CDATA[Apache Proxy Example]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/12/apache-proxy-example/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/12/apache-proxy-example/"/>
     <updated>2013-03-12T16:58:56-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/12/apache-proxy-example</id>
+    <id>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -100,7 +100,6 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
-<span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;VirtualHost *:80&gt;
 </span><span class='line'>        ServerName myapp.website.com
 </span><span class='line'>        ProxyRequests Off
@@ -122,16 +121,16 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
 </span><span class='line'>        ProxyTimeout     86400
 </span><span class='line'>
 </span><span class='line'>&lt;/VirtualHost&gt;
-</span><span class='line'></span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Cisco Catalyst 2960 - Notes]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
     <updated>2013-03-06T03:07:46-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes</id>
+    <id>http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes</id>
     <content type="html"><![CDATA[<h2>VLAN</h2>
 
 
@@ -237,9 +236,9 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   
   <entry>
     <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
     <updated>2013-02-20T22:08:22-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
     <content type="html"><![CDATA[<p>The server&rsquo;s default <a href="http://dev.mysql.com/doc/refman/5.5/en//server-system-variables.html#sysvar_max_allowed_packet"><code>max_allowed_packet</code></a> value is 1MB and it looks like it has exceeded the default max. You can increase this if the server needs to handle big queries. This can be done in two ways:</p>
 
 <p>Start MySQL client with the following option (64 MB for this example)</p>
@@ -256,9 +255,9 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   
   <entry>
     <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet/"/>
     <updated>2013-02-20T21:26:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet</id>
     <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
 
 <pre># puppet agent --disable "Reason why disabled"</pre>
@@ -280,9 +279,9 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   
   <entry>
     <title type="html"><![CDATA[Confluence Backup Errors]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors/"/>
     <updated>2013-02-20T15:17:32-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors</id>
     <content type="html"><![CDATA[<pre>The following error(s) occurred:
 com.atlassian.confluence.importexport.ImportExportException: Couldn't backup database data. at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEntities(AbstractXmlExporter.java:197) at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEverything(AbstractXmlExporter.java:99) at com.atlassian.confluence.importexport.impl.FileXmlExporter.backupEverything(FileXmlExporter.java:76)</pre>
 
@@ -299,9 +298,9 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   
   <entry>
     <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
     <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
 
 <p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
@@ -322,9 +321,9 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   
   <entry>
     <title type="html"><![CDATA[Configuring Memcached]]></title>
-    <link href="http://dyurk.github.io/blog/2013/01/11/configuring-memcached/"/>
+    <link href="http://www.dyurk.com/blog/2013/01/11/configuring-memcached/"/>
     <updated>2013-01-11T16:45:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/01/11/configuring-memcached</id>
+    <id>http://www.dyurk.com/blog/2013/01/11/configuring-memcached</id>
     <content type="html"><![CDATA[<h3>What is memcached?</h3>
 
 
@@ -351,9 +350,9 @@ OPTIONS=""</pre>
   
   <entry>
     <title type="html"><![CDATA[SVN Cat Error: "File Not Found". Gives Wrong Revision]]></title>
-    <link href="http://dyurk.github.io/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/"/>
+    <link href="http://www.dyurk.com/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/"/>
     <updated>2012-12-06T02:47:02-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision</id>
+    <id>http://www.dyurk.com/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision</id>
     <content type="html"><![CDATA[<p>You will need to use the peg revision</p>
 
 <p>svn <em><code>command</code></em> -r <em><code>OPERATIVE-REV</code></em> item@<em><code>PEG-REV</code></em></p>
@@ -364,9 +363,9 @@ OPTIONS=""</pre>
   
   <entry>
     <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error]]></title>
-    <link href="http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/"/>
+    <link href="http://www.dyurk.com/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/"/>
     <updated>2012-11-19T18:09:49-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel</id>
+    <id>http://www.dyurk.com/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel</id>
     <content type="html"><![CDATA[<pre>JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel</pre>
 
 
@@ -386,9 +385,9 @@ OPTIONS=""</pre>
   
   <entry>
     <title type="html"><![CDATA[Flush Memcached]]></title>
-    <link href="http://dyurk.github.io/blog/2012/10/17/flush-memcached/"/>
+    <link href="http://www.dyurk.com/blog/2012/10/17/flush-memcached/"/>
     <updated>2012-10-17T22:50:28-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/10/17/flush-memcached</id>
+    <id>http://www.dyurk.com/blog/2012/10/17/flush-memcached</id>
     <content type="html"><![CDATA[<pre>echo 'flush_all' | nc localhost 11211</pre>
 
 ]]></content>
@@ -396,9 +395,9 @@ OPTIONS=""</pre>
   
   <entry>
     <title type="html"><![CDATA[Restored a Cleared Git Stash]]></title>
-    <link href="http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash/"/>
+    <link href="http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash/"/>
     <updated>2012-10-05T14:33:35-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash</id>
+    <id>http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash</id>
     <content type="html"><![CDATA[<p>Run the following:</p>
 
 <pre>git fsck --lost-found</pre>
@@ -419,9 +418,9 @@ dangling commit e3b3b973asdasdasdasdasd7cqweqwe35f6d34e</pre>
   
   <entry>
     <title type="html"><![CDATA[Su Apache: "This Account Is Currently Not Available"]]></title>
-    <link href="http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available/"/>
+    <link href="http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available/"/>
     <updated>2012-09-11T16:04:27-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/09/11/this-account-is-currently-not-available</id>
+    <id>http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available</id>
     <content type="html"><![CDATA[<p>When trying to switch user to apache and you get the following: &#8221;This account is currently not available&#8221;. You need to set a shell for the apache user. Let&rsquo;s say we want to use bash.</p>
 
 <pre># chsh -s /bin/bash apache
@@ -441,9 +440,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[SVN Backup & Migration]]></title>
-    <link href="http://dyurk.github.io/blog/2012/08/23/svn-backup-migration/"/>
+    <link href="http://www.dyurk.com/blog/2012/08/23/svn-backup-migration/"/>
     <updated>2012-08-23T16:00:34-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/08/23/svn-backup-migration</id>
+    <id>http://www.dyurk.com/blog/2012/08/23/svn-backup-migration</id>
     <content type="html"><![CDATA[<h2>Backing Up</h2>
 
 
@@ -471,9 +470,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[VIM: Find & Replace]]></title>
-    <link href="http://dyurk.github.io/blog/2012/08/15/vim-find-replace/"/>
+    <link href="http://www.dyurk.com/blog/2012/08/15/vim-find-replace/"/>
     <updated>2012-08-15T20:16:02-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/08/15/vim-find-replace</id>
+    <id>http://www.dyurk.com/blog/2012/08/15/vim-find-replace</id>
     <content type="html"><![CDATA[<p>Find &ldquo;foo&rdquo; and replace with &ldquo;hello&rdquo;</p>
 
 <pre>:%s/foo/hello/g</pre>
@@ -487,9 +486,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Examples of Lftp]]></title>
-    <link href="http://dyurk.github.io/blog/2012/08/09/examples-of-lftp/"/>
+    <link href="http://www.dyurk.com/blog/2012/08/09/examples-of-lftp/"/>
     <updated>2012-08-09T13:14:25-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/08/09/examples-of-lftp</id>
+    <id>http://www.dyurk.com/blog/2012/08/09/examples-of-lftp</id>
     <content type="html"><![CDATA[<p>In this example we are changing directory to &ldquo;output&rdquo; and doing a listing of files:</p>
 
 <pre> lftp -e 'set net:timeout 10;cd output/;ls; bye' -u USER,PASSWORD ftp.foo.com/</pre>
@@ -504,9 +503,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Puppet: Adding a Package]]></title>
-    <link href="http://dyurk.github.io/blog/2012/08/09/puppet-adding-a-package/"/>
+    <link href="http://www.dyurk.com/blog/2012/08/09/puppet-adding-a-package/"/>
     <updated>2012-08-09T13:04:08-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/08/09/puppet-adding-a-package</id>
+    <id>http://www.dyurk.com/blog/2012/08/09/puppet-adding-a-package</id>
     <content type="html"><![CDATA[<p>For this example lets ensure we have lftp install.</p>
 
 <pre>package { "lftp":
@@ -518,9 +517,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Concatenate CAT]]></title>
-    <link href="http://dyurk.github.io/blog/2012/07/30/piping-cat-into-cat/"/>
+    <link href="http://www.dyurk.com/blog/2012/07/30/piping-cat-into-cat/"/>
     <updated>2012-07-30T15:30:07-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/07/30/piping-cat-into-cat</id>
+    <id>http://www.dyurk.com/blog/2012/07/30/piping-cat-into-cat</id>
     <content type="html"><![CDATA[<p>Let&rsquo;s say we have two files, <em>A.txt</em> &amp; <em>B.txt</em>. To show the output of these two files at once you will need to pipe cat using a &ldquo;&ndash;&rdquo;.</p>
 
 <pre>cat a.txt | cat - b.txt</pre>
@@ -532,9 +531,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[Chmod Directories and Files Separately]]></title>
-    <link href="http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files/"/>
+    <link href="http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files/"/>
     <updated>2012-07-10T01:28:42-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/07/10/chmod-directories-only-or-files</id>
+    <id>http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files</id>
     <content type="html"><![CDATA[<p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
 
 <p>For Directories:</p>
@@ -551,9 +550,9 @@ Shell changed.</pre>
   
   <entry>
     <title type="html"><![CDATA[MySQL High Load / Other Issues - Leap Second Bug]]></title>
-    <link href="http://dyurk.github.io/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/"/>
+    <link href="http://www.dyurk.com/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/"/>
     <updated>2012-07-03T01:28:25-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug</id>
+    <id>http://www.dyurk.com/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug</id>
     <content type="html"><![CDATA[<p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
 
 <p>The fix was simple:</p>

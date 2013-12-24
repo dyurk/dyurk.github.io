@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Editors' Picks | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/editors-picks/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/editors-picks/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[VIM: Find & Replace]]></title>
-    <link href="http://dyurk.github.io/blog/2012/08/15/vim-find-replace/"/>
+    <link href="http://www.dyurk.com/blog/2012/08/15/vim-find-replace/"/>
     <updated>2012-08-15T20:16:02-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/08/15/vim-find-replace</id>
+    <id>http://www.dyurk.com/blog/2012/08/15/vim-find-replace</id>
     <content type="html"><![CDATA[<p>Find &ldquo;foo&rdquo; and replace with &ldquo;hello&rdquo;</p>
 
 <pre>:%s/foo/hello/g</pre>
@@ -31,9 +31,9 @@
   
   <entry>
     <title type="html"><![CDATA[Safely Remove Archived Updates/hotfixes From Windows Server 2008 & Windows 7]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/07/remove-archived-updates-server-2008-7/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7/"/>
     <updated>2012-03-07T14:02:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/07/remove-archived-updates-server-2008-7</id>
+    <id>http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7</id>
     <content type="html"><![CDATA[<p>In a event where you are running low on disk space after applying a service pack or a set of updates, there are two unique tools that can be used to safely remove some of the archived information that is set aside by Windows.</p>
 
 <p>The two tools that can be used for Windows Server 2008 are <strong><a href="http://technet.microsoft.com/en-us/library/dd351467(v=ws.10).aspx#BKMK_COMPCLN" target="_blank">COMPCLN</a></strong> and <strong><a href="http://technet.microsoft.com/en-us/library/dd744382(v=ws.10).aspx" target="_blank">DISM</a>.</strong> COMPCLN is the older utility that&rsquo;s been around since Vista, and it is recommended that you run DISM instead. Either way both commands seem to do the same function. <em>Please note that COMPCLN does not work in Windows 7.</em></p>
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
+    <id>http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
     <content type="html"><![CDATA[<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
 
 <p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>
@@ -84,9 +84,9 @@
   
   <entry>
     <title type="html"><![CDATA[Get Email Notifications When Excel Workbook Has Been Amended.]]></title>
-    <link href="http://dyurk.github.io/blog/2011/05/25/get-email-notifications-when-excel-workbook-has-been-amended/"/>
+    <link href="http://www.dyurk.com/blog/2011/05/25/get-email-notifications-when-excel-workbook-has-been-amended/"/>
     <updated>2011-05-25T14:23:02-04:00</updated>
-    <id>http://dyurk.github.io/blog/2011/05/25/get-email-notifications-when-excel-workbook-has-been-amended</id>
+    <id>http://www.dyurk.com/blog/2011/05/25/get-email-notifications-when-excel-workbook-has-been-amended</id>
     <content type="html"><![CDATA[<p>Recently I ran across a situation where i had an Excel workbook that was on a shared drive, this file would get updated by different employees on any given time of the day. I need it a way to alert someone in management every time this file was amended. This was my solution:</p>
 
 <p>```vbnet
@@ -153,9 +153,9 @@ This Visual basic code sends an email via Outlook every time the workbook has be
   
   <entry>
     <title type="html"><![CDATA[Back Up / Restore Outlook Autocomplete (Recently Typed Emails)]]></title>
-    <link href="http://dyurk.github.io/blog/2011/05/13/back-up-restore-outlook-autocomplete-recently-typed-emails/"/>
+    <link href="http://www.dyurk.com/blog/2011/05/13/back-up-restore-outlook-autocomplete-recently-typed-emails/"/>
     <updated>2011-05-13T16:43:49-04:00</updated>
-    <id>http://dyurk.github.io/blog/2011/05/13/back-up-restore-outlook-autocomplete-recently-typed-emails</id>
+    <id>http://www.dyurk.com/blog/2011/05/13/back-up-restore-outlook-autocomplete-recently-typed-emails</id>
     <content type="html"><![CDATA[<p>You will need to copy &amp; paste the file; <strong>outlook.nk2</strong> from the Application Data folder.</p>
 
 <p><strong>Windows XP:</strong> <em>C:\Documents and Settings\username\Application Data\Microsoft\Outlook\outlook.NK2</em></p>

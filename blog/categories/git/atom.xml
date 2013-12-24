@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Git | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
     <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
 
 <p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[Restored a Cleared Git Stash]]></title>
-    <link href="http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash/"/>
+    <link href="http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash/"/>
     <updated>2012-10-05T14:33:35-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/10/05/restored-a-cleared-git-stash</id>
+    <id>http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash</id>
     <content type="html"><![CDATA[<p>Run the following:</p>
 
 <pre>git fsck --lost-found</pre>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Technology | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/technology/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues/"/>
     <updated>2013-03-26T13:35:01-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <id>http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues</id>
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
@@ -65,9 +65,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Apache Proxy Example]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/12/apache-proxy-example/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/12/apache-proxy-example/"/>
     <updated>2013-03-12T16:58:56-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/12/apache-proxy-example</id>
+    <id>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
 <p>```
@@ -101,9 +101,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Cisco Catalyst 2960 - Notes]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes/"/>
     <updated>2013-03-06T03:07:46-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/06/cisco-catalyst-2960-notes</id>
+    <id>http://www.dyurk.com/blog/2013/03/06/cisco-catalyst-2960-notes</id>
     <content type="html"><![CDATA[<h2>VLAN</h2>
 
 
@@ -209,9 +209,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet/"/>
     <updated>2013-02-20T21:26:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet</id>
     <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
 
 <pre># puppet agent --disable "Reason why disabled"</pre>
@@ -233,9 +233,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Confluence Backup Errors]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors/"/>
     <updated>2013-02-20T15:17:32-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors</id>
     <content type="html"><![CDATA[<pre>The following error(s) occurred:
 com.atlassian.confluence.importexport.ImportExportException: Couldn't backup database data. at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEntities(AbstractXmlExporter.java:197) at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEverything(AbstractXmlExporter.java:99) at com.atlassian.confluence.importexport.impl.FileXmlExporter.backupEverything(FileXmlExporter.java:76)</pre>
 

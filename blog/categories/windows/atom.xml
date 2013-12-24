@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Windows | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/windows/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[WUSB54G Windows 7 64-bit Driver Workaround]]></title>
-    <link href="http://dyurk.github.io/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/"/>
+    <link href="http://www.dyurk.com/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/"/>
     <updated>2012-05-02T00:15:41-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround</id>
+    <id>http://www.dyurk.com/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround</id>
     <content type="html"><![CDATA[<p>For some reason there are no 64bit drivers for the Linksys Wireless-G USB Network adapter. Well, there is a work around.</p>
 
 <p>Download the following driver:</p>
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[Running an Application as Administrator]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/29/running-an-application-as-administrator/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/29/running-an-application-as-administrator/"/>
     <updated>2012-03-29T12:27:34-04:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/29/running-an-application-as-administrator</id>
+    <id>http://www.dyurk.com/blog/2012/03/29/running-an-application-as-administrator</id>
     <content type="html"><![CDATA[<p>If you find yourself working on a computer that is locked down and are in need of doing some tasks that required administrative privileges, the following command might be helpful. This can be done directly from the &ldquo;RUN&rdquo; command window.</p>
 
 <pre>runas /user:<span style="background-color: #ffff00;">Domain\Admin</span> "<span style="background-color: #ccffff;">C:\WINDOWS\explorer.exe</span> /separate"</pre>
@@ -71,9 +71,9 @@
   
   <entry>
     <title type="html"><![CDATA[Safely Remove Archived Updates/hotfixes From Windows Server 2008 & Windows 7]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/07/remove-archived-updates-server-2008-7/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7/"/>
     <updated>2012-03-07T14:02:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/07/remove-archived-updates-server-2008-7</id>
+    <id>http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7</id>
     <content type="html"><![CDATA[<p>In a event where you are running low on disk space after applying a service pack or a set of updates, there are two unique tools that can be used to safely remove some of the archived information that is set aside by Windows.</p>
 
 <p>The two tools that can be used for Windows Server 2008 are <strong><a href="http://technet.microsoft.com/en-us/library/dd351467(v=ws.10).aspx#BKMK_COMPCLN" target="_blank">COMPCLN</a></strong> and <strong><a href="http://technet.microsoft.com/en-us/library/dd744382(v=ws.10).aspx" target="_blank">DISM</a>.</strong> COMPCLN is the older utility that&rsquo;s been around since Vista, and it is recommended that you run DISM instead. Either way both commands seem to do the same function. <em>Please note that COMPCLN does not work in Windows 7.</em></p>
@@ -98,9 +98,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
+    <id>http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
     <content type="html"><![CDATA[<p><a href="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png"><img class="size-full wp-image-430" title="symantec_enpoint_manager" src="http://d87studios.com/blog/wp-content/uploads/2012/03/symantec_enpoint_manager.png" alt="" width="552" height="450" /></a></p>
 
 <p>You can use the resetpass.bat tool to reset the user name and password for the account that you use to log on to Symantec Endpoint Protection Manager. If the user name or password is something other than admin, running resetpass.bat changes the user name and password back to admin.</p>
@@ -124,9 +124,9 @@
   
   <entry>
     <title type="html"><![CDATA[Upgrading Domain Controllers From Windows Server 2003 to 2008]]></title>
-    <link href="http://dyurk.github.io/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008/"/>
+    <link href="http://www.dyurk.com/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008/"/>
     <updated>2012-03-04T13:56:08-05:00</updated>
-    <id>http://dyurk.github.io/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008</id>
+    <id>http://www.dyurk.com/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008</id>
     <content type="html"><![CDATA[<p>When looking to upgrade your Active Directory system and Domain Controllers from a Windows Server 2003 to 2008, you will need to go over the <a title="AD Upgrade Checklist" href="http://technet.microsoft.com/en-us/library/cc753147(v=ws.10).aspx" target="_blank">Checklist</a> provided by Microsoft. One of the first steps in the checklist consist of preparing your environment to properly work with 2008. The following command will prepare your current AD and DC.</p>
 
 <p>Load the Windows Server 2008 installation cd &amp; navigate to adprep folder via comand promp: <strong>D:\sources\adprep</strong></p>

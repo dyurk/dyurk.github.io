@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Linux | DYURK | David Yurkiewicz]]></title>
-  <link href="http://dyurk.github.io/blog/categories/linux/atom.xml" rel="self"/>
-  <link href="http://dyurk.github.io/"/>
-  <updated>2013-12-22T16:42:13-05:00</updated>
-  <id>http://dyurk.github.io/</id>
+  <link href="http://www.dyurk.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://www.dyurk.com/"/>
+  <updated>2013-12-24T01:17:35-05:00</updated>
+  <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
-    <link href="http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues/"/>
+    <link href="http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues/"/>
     <updated>2013-03-26T13:35:01-04:00</updated>
-    <id>http://dyurk.github.io/blog/2013/03/26/confluence-xml-import-issues</id>
+    <id>http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues</id>
     <content type="html"><![CDATA[<p>Find the class that the import is having issues with. For this example ContentPermission is the problem.</p>
 
 <pre class="prettyprint">Error while importing backup: not-null property references a null or transient value: com.atlassian.confluence.security.ContentPermission.owningSet
@@ -65,9 +65,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Temporarily Disable Puppet]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet/"/>
     <updated>2013-02-20T21:26:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/temporarily-disable-puppet</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/temporarily-disable-puppet</id>
     <content type="html"><![CDATA[<p>This is can be done by an admin disabled of Puppet</p>
 
 <pre># puppet agent --disable "Reason why disabled"</pre>
@@ -89,9 +89,9 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
   
   <entry>
     <title type="html"><![CDATA[Confluence Backup Errors]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors/"/>
     <updated>2013-02-20T15:17:32-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/20/confluence-backup-errors</id>
+    <id>http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors</id>
     <content type="html"><![CDATA[<pre>The following error(s) occurred:
 com.atlassian.confluence.importexport.ImportExportException: Couldn't backup database data. at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEntities(AbstractXmlExporter.java:197) at com.atlassian.confluence.importexport.impl.AbstractXmlExporter.backupEverything(AbstractXmlExporter.java:99) at com.atlassian.confluence.importexport.impl.FileXmlExporter.backupEverything(FileXmlExporter.java:76)</pre>
 
@@ -108,9 +108,9 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   
   <entry>
     <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
-    <link href="http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos/"/>
+    <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/02/08/git-1-8-x-on-centos</id>
+    <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
     <content type="html"><![CDATA[<p>At the moment this is not on EPEL &amp; CentOS repo, you&rsquo;ll have to compile from source.</p>
 
 <p>Get the desired version: <a href="http://code.google.com/p/git-core/downloads/list"><a href="http://code.google.com/p/git-core/downloads/list">http://code.google.com/p/git-core/downloads/list</a></a></p>
@@ -131,9 +131,9 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   
   <entry>
     <title type="html"><![CDATA[Configuring Memcached]]></title>
-    <link href="http://dyurk.github.io/blog/2013/01/11/configuring-memcached/"/>
+    <link href="http://www.dyurk.com/blog/2013/01/11/configuring-memcached/"/>
     <updated>2013-01-11T16:45:26-05:00</updated>
-    <id>http://dyurk.github.io/blog/2013/01/11/configuring-memcached</id>
+    <id>http://www.dyurk.com/blog/2013/01/11/configuring-memcached</id>
     <content type="html"><![CDATA[<h3>What is memcached?</h3>
 
 
