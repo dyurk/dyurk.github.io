@@ -3,7 +3,15 @@ layout: post
 title: "Migrating from WordPress to Octopress"
 date: 2013-12-24 22:45:54 -0500
 comments: true
-categories: 
+categories:
+- Technology
+- Linux
+- web operations
+tags:
+- wordpress
+- octropress
+- GitHub
+- pages
 ---
 
 For some time I have look at moving away from Wordpress for various reasons (That would be for another post!). I took a look at various platforms, many which did not met my requirements. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.
