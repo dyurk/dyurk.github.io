@@ -19,7 +19,7 @@ For some time I have looked at moving away from Wordpress for various reasons (T
 Since you can host your blog from GitHub pages, my original plan was to first get a working copy running. After everything looked well, I would point my domain name to GitHub. This is how I did it...
 
 <h3>First Step: Get all data out of Wordpress</h3>
-This step was easy, just log-on to Wordpress' admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but you alsp need to export your database. I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.
+This step was easy, just log-on to Wordpress' admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but for the database export I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.
 
 All of the static files will need to be moved. If you are hosting them somewhere else you will only have to worry about the <strong>wp-content</strong> folder. This folder contains all of your plug-ins, themes, and images. In reality all we need is the images, in my case I deleted the rest except the images which were under the <em>uploads</em> folder.
 
