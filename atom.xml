@@ -4,7 +4,7 @@
   <title><![CDATA[DYURK | David Yurkiewicz]]></title>
   <link href="http://www.dyurk.com/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2013-12-24T19:22:30-05:00</updated>
+  <updated>2013-12-25T14:11:37-05:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
@@ -12,6 +12,157 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Migrating From WordPress to Octopress]]></title>
+    <link href="http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress/"/>
+    <updated>2013-12-24T22:45:54-05:00</updated>
+    <id>http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress</id>
+    <content type="html"><![CDATA[<p>For some time I have look at moving away from Wordpress for various reasons (That would be for another post!). I took a look at various platforms, many which did not met my requirements. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.</p>
+
+<p>Since you can host your blog from GitHub pages, my original plan was to first get a working copy running from my repository, then  after everything looked well I would point my domain name to GitHub. This is how I did it&hellip;</p>
+
+<h3>First Step: Get all data out of Wordpress</h3>
+
+
+<p>This step was easy, just log-on to Wordpress&#8217; admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but you will need to also export from your database. I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.</p>
+
+<p>All of your static files will also need to be moved. If you are hosting them somewhere else you will only have to worry about the <strong>wp-content</strong> folder. This folder contains all of your plug-ins, themes, and images. In reality all we need is the images, in my case I deleted the rest except the images which were under the <em>uploads</em> folder.</p>
+
+<h3>Install Octopress</h3>
+
+
+<p>Again, this step is easy and very well <a href="http://octopress.org/docs/setup/">documented</a>. If you are hosting on GitHub you will need to create a new repository that follows the correct naming convention.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>github_username.github.io</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For example, my repo is <strong>dyurk.github.io</strong>.</p>
+
+<h3>Importing your data to Octopress</h3>
+
+
+<p>You will need to install the jekyll-import gem:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install jekyll-import
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the directory where you have your <code>wordpress.xml</code> file run the following:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>ruby -rubygems -e <span class="s1">&#39;require &quot;jekyll-import&quot;;</span>
+</span><span class='line'><span class="s1">    JekyllImport::Importers::WordPress.run({</span>
+</span><span class='line'><span class="s1">      &quot;dbname&quot;   =&gt; &quot;wordpress_db&quot;,</span>
+</span><span class='line'><span class="s1">      &quot;user&quot;     =&gt; &quot;user&quot;,</span>
+</span><span class='line'><span class="s1">      &quot;password&quot; =&gt; &quot;pass&quot;,</span>
+</span><span class='line'><span class="s1">      &quot;host&quot;     =&gt; &quot;localhost&quot;,</span>
+</span><span class='line'><span class="s1">      &quot;prefix&quot;   =&gt; &quot;wp_&quot;,</span>
+</span><span class='line'><span class="s1">      &quot;clean_entities&quot; =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;comments&quot;       =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;categories&quot;     =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;tags&quot;           =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;more_excerpt&quot;   =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;more_anchor&quot;    =&gt; true,</span>
+</span><span class='line'><span class="s1">      &quot;status&quot;         =&gt; [&quot;publish&quot;]</span>
+</span><span class='line'><span class="s1">    })&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will create a <strong>_post</strong> directory. Which will need to be move to <strong>octopress/source/</strong>.</p>
+
+<p>Keep in mind that any <code>&lt;code&gt;</code> tags will need to be replace by backticks. Any snippets or tags specific to Wordpress will most likely break formatting.</p>
+
+<p>Finally, for the static content in the <strong>wp-content</strong> folder, I decided to move the entire directory under <strong>octopress/source/</strong>. That way I don&rsquo;t have to update the code and SEO does not take a hit.</p>
+
+<h3>Custom domain and 404s</h3>
+
+
+<p>If you own a domain that you would like to use for your GitHub hosted blog. Basically, all you need is an A record pointing to <em>204.232.175.78</em> and a file under <strong>octopress/source/</strong> name <code>CNAME</code>. In this file add your domain name like so:</p>
+
+<figure class='code'><figcaption><span>&#8230;/octopress/source/CNAME</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">www.dyurk.com</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To gracefully handle 404s I decided to redirect to the homepage. To add a custom 404 page just create a file under the <strong>source/</strong> directory. The file must be named <code>404.html</code>. Here is my file:</p>
+
+<figure class='code'><figcaption><span>&#8230;/octopress/source/404.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;head&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;refresh&quot;</span> <span class="na">content=</span><span class="s">&quot;0; url=http://dyurk.com/&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/head&gt;</span>
+</span><span class='line'><span class="nt">&lt;body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/body&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<h3>Conclusion</h3>
+
+
+<p>After the DNS changes take effect the blog should be accessible via the domain name. If you are looking to customize your blog I recommend reading Octopress&#8217; documentation on the topic: <a href="http://octopress.org/docs/theme/.">http://octopress.org/docs/theme/.</a></p>
+
+<p>As a side note, if you need to moved your working copy to a new computer or just need to re-create it, you will need to do the following:</p>
+
+<p>Clone the <em>source</em> branch:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bundle install and setup GitHub pages:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install bundler
+</span><span class='line'><span class="nv">$ </span>sudo gem install bundler
+</span><span class='line'><span class="nv">$ </span>rbenv rehash <span class="o">&amp;&amp;</span> bundle install <span class="o">&amp;&amp;</span> rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now fetch the master branch:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>_deploy
+</span><span class='line'><span class="nv">$ </span>git fetch —all
+</span><span class='line'><span class="nv">$ </span>git reset --hard origin/master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Confluence XML Import Issues]]></title>
@@ -79,7 +230,7 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
     <id>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -100,27 +251,27 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
 <span class='line-number'>19</span>
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;VirtualHost *:80&gt;
-</span><span class='line'>        ServerName myapp.website.com
-</span><span class='line'>        ProxyRequests Off
+</pre></td><td class='code'><pre><code class='apacheconf'><span class='line'><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nb">ServerName</span> myapp.website.com
+</span><span class='line'>        <span class="nb">ProxyRequests</span> <span class="k">Off</span>
 </span><span class='line'>
-</span><span class='line'>        &lt;Proxy *&gt;
-</span><span class='line'>                Order deny,allow
-</span><span class='line'>                Allow from all
-</span><span class='line'>        &lt;/Proxy&gt;
+</span><span class='line'>        <span class="nt">&lt;Proxy</span> <span class="s">*</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nb">Order</span> deny,allow
+</span><span class='line'>                <span class="nb">Allow</span> from <span class="k">all</span>
+</span><span class='line'>        <span class="nt">&lt;/Proxy&gt;</span>
 </span><span class='line'>
-</span><span class='line'>                # Logging
-</span><span class='line'>        LogFormat "%h %l %u %t \"%r\" %&gt;s %b" common
-</span><span class='line'>        CustomLog logs/access_log common
+</span><span class='line'>                <span class="c"># Logging</span>
+</span><span class='line'>        <span class="nb">LogFormat</span> <span class="s2">&quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot;</span> common
+</span><span class='line'>        <span class="nb">CustomLog</span> logs/access_log common
 </span><span class='line'>
 </span><span class='line'>
-</span><span class='line'>        ProxyTimeout    7200
-</span><span class='line'>        ProxyPreserveHost On
-</span><span class='line'>        ProxyPass           /       http://localhost:7990/
-</span><span class='line'>        ProxyPassReverse    /       http://localhost:7990/
-</span><span class='line'>        ProxyTimeout     86400
+</span><span class='line'>        <span class="nb">ProxyTimeout</span>    <span class="m">7200</span>
+</span><span class='line'>        <span class="nb">ProxyPreserveHost</span> <span class="k">On</span>
+</span><span class='line'>        <span class="nb">ProxyPass</span>           /       http://localhost:7990/
+</span><span class='line'>        <span class="nb">ProxyPassReverse</span>    /       http://localhost:7990/
+</span><span class='line'>        <span class="nb">ProxyTimeout</span>     <span class="m">86400</span>
 </span><span class='line'>
-</span><span class='line'>&lt;/VirtualHost&gt;
+</span><span class='line'><span class="nt">&lt;/VirtualHost&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
@@ -544,22 +695,6 @@ Shell changed.</pre>
 <p>For Files:</p>
 
 <pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MySQL High Load / Other Issues - Leap Second Bug]]></title>
-    <link href="http://www.dyurk.com/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/"/>
-    <updated>2012-07-03T01:28:25-04:00</updated>
-    <id>http://www.dyurk.com/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug</id>
-    <content type="html"><![CDATA[<p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
-
-<p>The fix was simple:</p>
-
-<pre lang="shell" prompt="$"> service ntpd stop
-<br>date -s "`date`"
-<br>service ntpd start</pre>
 
 ]]></content>
   </entry>

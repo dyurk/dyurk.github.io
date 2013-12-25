@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web Operations | DYURK | David Yurkiewicz]]></title>
   <link href="http://www.dyurk.com/blog/categories/web-operations/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2013-12-24T19:22:30-05:00</updated>
+  <updated>2013-12-25T14:11:37-05:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
@@ -70,7 +70,7 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
     <id>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example</id>
     <content type="html"><![CDATA[<p>Apache proxy example for web app running on myapp.website.com on port 7990.</p>
 
-<p>```
+<p>```apacheconf
 <VirtualHost *:80></p>
 
 <pre><code>    ServerName myapp.website.com

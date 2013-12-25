@@ -250,11 +250,15 @@
     </url>
     <url>
         <loc>http://www.dyurk.com/blog/2013/03/12/apache-proxy-example/</loc>
-        <lastmod>2013-12-24T01:06:39-05:00</lastmod>
+        <lastmod>2013-12-25T11:22:15-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.dyurk.com/blog/2013/03/26/confluence-xml-import-issues/</loc>
         <lastmod>2013-12-24T01:06:39-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress/</loc>
+        <lastmod>2013-12-25T14:04:46-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.dyurk.com/robots.txt</loc>
@@ -266,10 +270,10 @@
     </url>
     <url>
         <loc>http://www.dyurk.com/</loc>
-        <lastmod>2013-12-24T01:06:39-05:00</lastmod>
+        <lastmod>2013-12-25T14:04:46-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.dyurk.com/blog/archives/</loc>
-        <lastmod>2013-12-24T01:06:39-05:00</lastmod>
+        <lastmod>2013-12-25T14:04:46-05:00</lastmod>
     </url>
 </urlset>
