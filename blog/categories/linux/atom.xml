@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | DYURK | David Yurkiewicz]]></title>
   <link href="http://www.dyurk.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2013-12-25T14:28:07-05:00</updated>
+  <updated>2013-12-25T14:42:35-05:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
@@ -18,16 +18,16 @@
     <link href="http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress/"/>
     <updated>2013-12-24T22:45:54-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress</id>
-    <content type="html"><![CDATA[<p>For some time I have look at moving away from Wordpress for various reasons (That would be for another post!). I took a look at various platforms, many which did not met my requirements. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.</p>
+    <content type="html"><![CDATA[<p>For some time I have looked at moving away from Wordpress for various reasons (That would be for another post!). I took a look at various platforms, many which did not met my requirements. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.</p>
 
 <p>Since you can host your blog from GitHub pages, my original plan was to first get a working copy running from my repository, then  after everything looked well I would point my domain name to GitHub. This is how I did it&hellip;</p>
 
 <h3>First Step: Get all data out of Wordpress</h3>
 
 
-<p>This step was easy, just log-on to Wordpress' admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but you will need to also export from your database. I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.</p>
+<p>This step was easy, just log-on to Wordpress' admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but you alsp need to export your database. I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.</p>
 
-<p>All of your static files will also need to be moved. If you are hosting them somewhere else you will only have to worry about the <strong>wp-content</strong> folder. This folder contains all of your plug-ins, themes, and images. In reality all we need is the images, in my case I deleted the rest except the images which were under the <em>uploads</em> folder.</p>
+<p>All of the static files will need to be moved. If you are hosting them somewhere else you will only have to worry about the <strong>wp-content</strong> folder. This folder contains all of your plug-ins, themes, and images. In reality all we need is the images, in my case I deleted the rest except the images which were under the <em>uploads</em> folder.</p>
 
 <h3>Install Octopress</h3>
 
