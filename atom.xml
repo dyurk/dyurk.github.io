@@ -4,7 +4,7 @@
   <title><![CDATA[DYURK | David Yurkiewicz]]></title>
   <link href="http://www.dyurk.com/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2013-12-25T14:51:22-05:00</updated>
+  <updated>2013-12-25T14:57:58-05:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
@@ -25,7 +25,7 @@
 <h3>First Step: Get all data out of Wordpress</h3>
 
 
-<p>This step was easy, just log-on to Wordpress&#8217; admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but you alsp need to export your database. I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.</p>
+<p>This step was easy, just log-on to Wordpress&#8217; admin page and initiate an <a href="http://en.blog.wordpress.com/2006/06/12/xml-import-export/">XML export</a>. This is optional, but for the database export I decided that it would be easier to just do a MySQL dump and then do an import on my local MySQL instance.</p>
 
 <p>All of the static files will need to be moved. If you are hosting them somewhere else you will only have to worry about the <strong>wp-content</strong> folder. This folder contains all of your plug-ins, themes, and images. In reality all we need is the images, in my case I deleted the rest except the images which were under the <em>uploads</em> folder.</p>
 
