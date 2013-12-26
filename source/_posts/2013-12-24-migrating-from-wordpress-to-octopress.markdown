@@ -14,7 +14,7 @@ tags:
 - pages
 ---
 
-For some time I have looked at moving away from Wordpress for various reasons (That would be for another post!). I took a look at various platforms, many which did not met my requirements. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.
+For some time I have looked at moving away from Wordpress for numerous reasons (That would be for another post!). I took a look at various platforms, but most fell short of expectations. Either they were too bloated, troublesome to manage or they lack some core features. I played around with <a href="http://jekyllrb.com/">Jekyll</a> and I liked the initial idea. But, after doing more research I found <a href="http://octopress.org/">Octopress</a> and I was quite happy with the final result.
 
 Since you can host your blog from GitHub pages, my original plan was to first get a working copy running. After everything looked well, I would point my domain name to GitHub. This is how I did it...
 
