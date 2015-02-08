@@ -11,14 +11,11 @@ categories: []
 tags: []
 comments: []
 ---
-<a href="http://dyurk.com/wp-content/uploads/2011/08/david.jpg"><img class="size-medium wp-image-352" title="David Yurkiewicz" alt="David Yurkiewicz" src="http://dyurk.com/wp-content/uploads/2011/08/david-300x300.jpg" width="300" height="300" /></a>
 
 <h1>David Yurkiewicz</h1>
 <em>Web Operations Engineer aka Systems administrator currently working at Etsy. Mostly focused on open source web technologies.</em>
 
 David Yurkiewicz is a Web Operations Engineer at Etsy's Infrastructure and Operations team. From IT Admin, sole systems administrator to WebOps engineer, David is a firm believer in automation and in working smarter and not harder. An advocate for open source software and web solutions. He enjoys graphs, metrics and anything that tells a story about the systems he is managing.
-<h4>About the blog:</h4>
-I've had the privilege of doing systems administration for quite some time now and I decided that it would be great to have a blog to share some tips, quick notes, wins and failures. Occasionally, there might be some rants and I might even go off topic, but I will try to add an educational value to each post. We should be learning something new each day!<em>  </em>
 
 <span style="line-height: 1.5em;">Please fell free to communicate with me! Follow me @d87tech or click on the contact page. </span>
 
