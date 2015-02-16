@@ -261,6 +261,12 @@
         <lastmod>2013-12-25T20:05:56-05:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://www.dyurk.com/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/
+        </loc>
+        <lastmod>2015-02-16T18:12:13-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.dyurk.com/robots.txt</loc>
         <lastmod>2013-12-24T01:06:39-05:00</lastmod>
     </url>
@@ -270,10 +276,10 @@
     </url>
     <url>
         <loc>http://www.dyurk.com/</loc>
-        <lastmod>2013-12-25T20:05:56-05:00</lastmod>
+        <lastmod>2015-02-16T18:12:13-05:00</lastmod>
     </url>
     <url>
         <loc>http://www.dyurk.com/blog/archives/</loc>
-        <lastmod>2013-12-25T20:05:56-05:00</lastmod>
+        <lastmod>2015-02-16T18:12:13-05:00</lastmod>
     </url>
 </urlset>

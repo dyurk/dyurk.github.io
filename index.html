@@ -9,7 +9,7 @@
   <meta name="author" content="David Yurkiewicz">
 
   
-  <meta name="description" content="For some time I have looked at moving away from Wordpress for numerous reasons (That would be for another post!). I took a look at various platforms &hellip;">
+  <meta name="description" content="Recently I took part in the migration of Splunk over to ELK (Elastic Search/Logstash/Kibana). One of the main road-blocks with this migration was the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,183 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T12:59:41-05:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently I took part in the migration of Splunk over to ELK (Elastic Search/Logstash/Kibana). One of the main road-blocks with this migration was the syntax changes that were introduce since the query language was different in the new system.</p>
+
+<p>Splunk uses a proprietary language called &ldquo;search processing language&rdquo; or SPL for short. Kibana and the ELK stack make use of Apache Lucene. These two languages are not difficult by themselves, but converting queries over from SPL to Lucene is not always a trivial task.</p>
+
+<p>I wanted to find an easy way of converting Splunk queries over to Lucene, so I started working on a translator.</p>
+
+<h3>What is splogTASH?</h3>
+
+
+<p><img src="https://raw.githubusercontent.com/dyurk/splogtash/master/public/splogstash_screenshot.png"></p>
+
+<p>splogTASH is a <a href="http://www.sinatrarb.com/">Sinatra</a> application that translates queries depending on the definitions provided. The main definitions are stored in a JSON formatted file <a href="https://github.com/dyurk/splogTASH/blob/master/helpers/lucene.json"><code>/helpers/lucene.json</code></a>.</p>
+
+<figure class='code'><figcaption><span>../helpers/lucene.json</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nt">&quot;lucene&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nt">&quot;/data/syslog/current/web/info.log&quot;</span><span class="p">:</span> <span class="s2">&quot;web_info_log AND&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;/data/syslog/current/web/access.log&quot;</span><span class="p">:</span> <span class="s2">&quot;web_access_log AND&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;/data/syslog/current/web/error.log&quot;</span><span class="p">:</span> <span class="s2">&quot;web_error_log AND&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;source=&quot;</span><span class="p">:</span> <span class="s2">&quot;type:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;uri=&quot;</span><span class="p">:</span> <span class="s2">&quot;request_uri:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;uri_path=&quot;</span><span class="p">:</span> <span class="s2">&quot;request_uri:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;http_response=&quot;</span><span class="p">:</span> <span class="s2">&quot;reponse:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;=&quot;</span><span class="p">:</span> <span class="s2">&quot;:&quot;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nt">&quot;pre_lucene&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nt">&quot;| where eventcount &gt;&quot;</span><span class="p">:</span> <span class="s2">&quot;min_doc_count:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;transaction &quot;</span><span class="p">:</span> <span class="s2">&quot; agg:terms field:&quot;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;stats count by &quot;</span><span class="p">:</span> <span class="s2">&quot; agg:stats field:&quot;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see there are two objects in the schema, <em>lucene</em> and <em>pre_lucene</em>. Since splogTASH takes the whole inputed query and tokenizes each matching term, I added <em>pre_lucene</em> to easily convert before tokenizations. This comes in handy when dealing with complex queries that do aggregations for example.</p>
+
+<p>Under the <em>lucene</em> object we see an example for a web info log:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="s2">&quot;/data/syslog/current/web/info.log&quot;</span><span class="err">:</span> <span class="s2">&quot;web_info_log AND&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here we are saying that any time we match <strong>&ldquo;/data/syslog/current/web/info.log&rdquo;</strong>, we want <strong>&ldquo;web_info_log AND&rdquo;</strong> in return. It&rsquo;s as simple as that, to add your own definitions follow the patter of &ldquo;term&rdquo; : &ldquo;definition&rdquo;.</p>
+
+<p>Lastly, I would like to point out the main splogtash.rb file (line 39-48):</p>
+
+<figure class='code'><figcaption><span>../splogtash.rb</span><a href='https://github.com/dyurk/splogTASH/blob/master/splogtash.rb#L31-L50'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="c1"># post processing</span>
+</span><span class='line'>    <span class="n">inputs</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">query</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">queries</span> <span class="o">&lt;&lt;</span> <span class="n">query</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="n">queries</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">q</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">temp_var</span> <span class="o">=</span> <span class="nb">String</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>      <span class="n">temp_var</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">dup</span>
+</span><span class='line'>      <span class="n">lucene</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="p">,</span> <span class="n">u</span><span class="o">|</span> <span class="n">temp_var</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">u</span><span class="p">)}</span>
+</span><span class='line'>      <span class="k">case</span> <span class="n">temp_var</span>
+</span><span class='line'>      <span class="k">when</span> <span class="sr">/AND/</span>
+</span><span class='line'>           <span class="n">temp_var</span> <span class="o">=</span> <span class="n">temp_var</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">when</span> <span class="sr">/!/</span>
+</span><span class='line'>           <span class="n">temp_var</span> <span class="o">=</span> <span class="n">temp_var</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">when</span> <span class="sr">/\//</span>
+</span><span class='line'>           <span class="n">temp_var</span> <span class="o">=</span> <span class="n">temp_var</span><span class="o">.</span><span class="n">gsub!</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">\/&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">end</span>
+</span><span class='line'>      <span class="n">lucenyze</span> <span class="o">&lt;&lt;</span> <span class="n">temp_var</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="n">rtg</span> <span class="o">&lt;&lt;</span> <span class="n">lucenyze</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">rtg</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the post-processing section there is a case statement which handles global translations. In this example I&rsquo;m cleaning the query by escaping &ldquo;/&rdquo; and also replacing &ldquo;!&rdquo; with &ldquo;&ndash;&rdquo; (exclusions).</p>
+
+<p>After a query has been converted we can then click on the translated query to test on Kibana. You might be interested in customizing the URL to best fit you. Look at <code>../views/search.erb</code>, replace &ldquo;kibana.initech.com&rdquo;.</p>
+
+<figure class='code'><figcaption><span>../views/search.erb</span><a href='https://github.com/dyurk/splogTASH/blob/master/views/search.erb#L9'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel panel-success&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;panel-body&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;pre&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://kibana.initech.com/#/dashboard/file/logstash.json?from=5m&amp;query=&lt;%= h @escaped_input %&gt;&quot;</span><span class="nt">&gt;</span><span class="err">&lt;</span>%= @input %&gt;<span class="nt">&lt;/a&gt;&lt;/pre&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<h3>Try it yourself!</h3>
+
+
+<p>It&rsquo;s real simple to get started. The source can be found on my GitHub page: <a href="https://github.com/dyurk/splogTASH">https://github.com/dyurk/splogTASH</a></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git clone git@github.com:dyurk/splogTASH.git
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>splogTASH/ <span class="o">&amp;&amp;</span> rackup -p 8080
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now go to <a href="http://localhost:8080">http://localhost:8080</a></p>
+
+<p><em>Patches welcome!! </em></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -818,46 +995,6 @@ OPTIONS=""</pre>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/">SVN Cat Error: &#8220;File Not Found&#8221;. Gives Wrong Revision</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-06T02:47:02-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You will need to use the peg revision</p>
-
-<p>svn <em><code>command</code></em> -r <em><code>OPERATIVE-REV</code></em> item@<em><code>PEG-REV</code></em></p>
-
-<p><a href="http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html">http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -879,6 +1016,10 @@ OPTIONS=""</pre>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/24/migrating-from-wordpress-to-octopress/">Migrating From WordPress to Octopress</a>
       </li>
     
@@ -892,10 +1033,6 @@ OPTIONS=""</pre>
     
       <li class="post">
         <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
       </li>
     
   </ul>

@@ -9,7 +9,8 @@
   <meta name="author" content="David Yurkiewicz">
 
   
-  <meta name="description" content="JIRA v5 SVN commit tab error. com.atlassian.jira.plugin.ext.subversion:subversion-commits-tabpanel To fix this issue you will need to remove the  &hellip;">
+  <meta name="description" content="You will need to use the peg revision svn command -r OPERATIVE-REV item@PEG-REV http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +89,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/">SVN Cat Error: &#8220;File Not Found&#8221;. Gives Wrong Revision</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-06T02:47:02-05:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You will need to use the peg revision</p>
+
+<p>svn <em><code>command</code></em> -r <em><code>OPERATIVE-REV</code></em> item@<em><code>PEG-REV</code></em></p>
+
+<p><a href="http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html">http://svnbook.red-bean.com/en/1.2/svn.advanced.pegrevs.html</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -500,52 +541,6 @@ Shell changed.</pre>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/chmod-directories-only-or-files/">Chmod Directories and Files Separately</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T01:28:42-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
-
-<p>For Directories:</p>
-
-<pre lang="shell" prompt="$">find . -type d -exec chmod -v 775 {} \;</pre>
-
-
-<p>For Files:</p>
-
-<pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -569,6 +564,10 @@ Shell changed.</pre>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/24/migrating-from-wordpress-to-octopress/">Migrating From WordPress to Octopress</a>
       </li>
     
@@ -582,10 +581,6 @@ Shell changed.</pre>
     
       <li class="post">
         <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
       </li>
     
   </ul>

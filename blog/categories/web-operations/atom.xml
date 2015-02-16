@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web Operations | DYURK | David Yurkiewicz]]></title>
   <link href="http://www.dyurk.com/blog/categories/web-operations/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2015-02-08T12:46:06-05:00</updated>
+  <updated>2015-02-16T18:25:36-05:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
     <name><![CDATA[David Yurkiewicz]]></name>
@@ -12,6 +12,115 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[splogTASH - SPL to Lucene Translator]]></title>
+    <link href="http://www.dyurk.com/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/"/>
+    <updated>2015-02-08T12:59:41-05:00</updated>
+    <id>http://www.dyurk.com/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator</id>
+    <content type="html"><![CDATA[<p>Recently I took part in the migration of Splunk over to ELK (Elastic Search/Logstash/Kibana). One of the main road-blocks with this migration was the syntax changes that were introduce since the query language was different in the new system.</p>
+
+<p>Splunk uses a proprietary language called &ldquo;search processing language&rdquo; or SPL for short. Kibana and the ELK stack make use of Apache Lucene. These two languages are not difficult by themselves, but converting queries over from SPL to Lucene is not always a trivial task.</p>
+
+<p>I wanted to find an easy way of converting Splunk queries over to Lucene, so I started working on a translator.</p>
+
+<h3>What is splogTASH?</h3>
+
+
+<p><img src="https://raw.githubusercontent.com/dyurk/splogtash/master/public/splogstash_screenshot.png"></p>
+
+<p>splogTASH is a <a href="http://www.sinatrarb.com/">Sinatra</a> application that translates queries depending on the definitions provided. The main definitions are stored in a JSON formatted file <a href="https://github.com/dyurk/splogTASH/blob/master/helpers/lucene.json"><code>/helpers/lucene.json</code></a>.</p>
+
+<p>```json ../helpers/lucene.json
+{</p>
+
+<pre><code>"lucene": {
+    "/data/syslog/current/web/info.log": "web_info_log AND",
+    "/data/syslog/current/web/access.log": "web_access_log AND",
+    "/data/syslog/current/web/error.log": "web_error_log AND",
+    "source=": "type:",
+    "uri=": "request_uri:",
+    "uri_path=": "request_uri:",
+    "http_response=": "reponse:",
+    "=": ":"
+},
+"pre_lucene": {
+    "| where eventcount &gt;": "min_doc_count:",
+    "transaction ": " agg:terms field:",
+    "stats count by ": " agg:stats field:"
+    }
+</code></pre>
+
+<p>}
+```</p>
+
+<p>As you can see there are two objects in the schema, <em>lucene</em> and <em>pre_lucene</em>. Since splogTASH takes the whole inputed query and tokenizes each matching term, I added <em>pre_lucene</em> to easily convert before tokenizations. This comes in handy when dealing with complex queries that do aggregations for example.</p>
+
+<p>Under the <em>lucene</em> object we see an example for a web info log:</p>
+
+<p><code>json
+"/data/syslog/current/web/info.log": "web_info_log AND"
+</code>
+Here we are saying that any time we match <strong>&ldquo;/data/syslog/current/web/info.log&rdquo;</strong>, we want <strong>&ldquo;web_info_log AND&rdquo;</strong> in return. It&rsquo;s as simple as that, to add your own definitions follow the patter of &ldquo;term&rdquo; : &ldquo;definition&rdquo;.</p>
+
+<p>Lastly, I would like to point out the main splogtash.rb file (line 39-48):</p>
+
+<p>``` ruby ../splogtash.rb <a href="https://github.com/dyurk/splogTASH/blob/master/splogtash.rb#L31-L50">https://github.com/dyurk/splogTASH/blob/master/splogtash.rb#L31-L50</a></p>
+
+<pre><code>    # post processing
+    inputs.split.each do |query|
+      queries &lt;&lt; query
+    end
+    queries.each do |q|
+      temp_var = String.new
+      temp_var = q.dup
+      lucene.each {|f, u| temp_var.gsub!(f, u)}
+      case temp_var
+      when /AND/
+           temp_var = temp_var.delete('"')
+      when /!/
+           temp_var = temp_var.delete("!").insert(0, "-")
+      when /\//
+           temp_var = temp_var.gsub!("/","\\\/")
+      end
+      lucenyze &lt;&lt; temp_var
+    end
+    rtg &lt;&lt; lucenyze.join(' ')
+    return rtg
+  end
+</code></pre>
+
+<p>```
+In the post-processing section there is a case statement which handles global translations. In this example I&rsquo;m cleaning the query by escaping &ldquo;/&rdquo; and also replacing &ldquo;!&rdquo; with &ldquo;&ndash;&rdquo; (exclusions).</p>
+
+<p>After a query has been converted we can then click on the translated query to test on Kibana. You might be interested in customizing the URL to best fit you. Look at <code>../views/search.erb</code>, replace &ldquo;kibana.initech.com&rdquo;.</p>
+
+<p>``` html ../views/search.erb <a href="https://github.com/dyurk/splogTASH/blob/master/views/search.erb#L9">https://github.com/dyurk/splogTASH/blob/master/views/search.erb#L9</a></p>
+
+<div class="panel panel-success">
+  <div class="panel-body">
+<pre> <a href="https://kibana.initech.com/#/dashboard/file/logstash.json?from=5m&query=<%= h @escaped_input %>"><%= @input %></a></pre>
+  </div>
+</div>
+
+
+<p>```</p>
+
+<h3>Try it yourself!</h3>
+
+
+<p>It&rsquo;s real simple to get started. The source can be found on my GitHub page: <a href="https://github.com/dyurk/splogTASH">https://github.com/dyurk/splogTASH</a></p>
+
+<p><code>bash
+$ git clone git@github.com:dyurk/splogTASH.git
+$ cd splogTASH/ &amp;&amp; rackup -p 8080
+</code></p>
+
+<p>Now go to <a href="http://localhost:8080">http://localhost:8080</a></p>
+
+<p><em>Patches welcome!! </em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Migrating From WordPress to Octopress]]></title>
@@ -317,25 +426,6 @@ $ sed -i '/&lt;object class="ContentPermission"/,/&lt;\/object&gt;/d' entities.x
  Accessing tftp://102.10.15.1/backup_cfg_for_my_router...
  Loading backup_cfg_for_router from 102.10.15.44 (via FastEthernet0/0): !
  [OK - 1030 bytes]</pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
-    <link href="http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
-    <updated>2013-02-20T22:08:22-05:00</updated>
-    <id>http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
-    <content type="html"><![CDATA[<p>The server&rsquo;s default <a href="http://dev.mysql.com/doc/refman/5.5/en//server-system-variables.html#sysvar_max_allowed_packet"><code>max_allowed_packet</code></a> value is 1MB and it looks like it has exceeded the default max. You can increase this if the server needs to handle big queries. This can be done in two ways:</p>
-
-<p>Start MySQL client with the following option (64 MB for this example)</p>
-
-<pre><code>mysql --max_allowed_packet=64M </code></pre>
-
-
-<p>or Add the following in your my.cnf file</p>
-
-<pre><code>max_allowed_packet=64M</code></pre>
 
 ]]></content>
   </entry>

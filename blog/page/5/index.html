@@ -9,7 +9,7 @@
   <meta name="author" content="David Yurkiewicz">
 
   
-  <meta name="description" content="Each time that you type a URL in the address bar or click on a link in Internet Explorer browser, the URL address is automatically added to the &hellip;">
+  <meta name="description" content="The Problem: When you start a Terminal Services session with a local printer, a redirected print queue is created in the Terminal Services session. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/18/terminal-service-printers-do-not-keep-local-settings/">Terminal Service Printers Do Not Keep Local Settings.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-18T16:07:15-04:00" pubdate data-updated="true">Aug 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>The Problem:</h3>
+
+
+<p>When you start a Terminal Services session with a local printer, a redirected print queue is created in the Terminal Services session. All of your settings should be transfer over to the redirected printer, but that is not the case all the time. Some printing models do not support detecting changes to the Device Settings tab for each redirected printer.</p>
+
+<h3>The Solution:</h3>
+
+
+<p>The solution is to make the desired change in the Device Settings tab and then change a different setting in another tab, then hit Apply. This is all done inside the terminal session.</p>
+
+<p>Source: <a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942"><a href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942">http://support.microsoft.com/default.aspx?scid=KB;EN-US;243942</a></a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -675,44 +721,6 @@ C:Documents and Settings%USER_NAME%Local SettingsTemporary Internet FilesOLK# (w
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/13/ethernet-cable-diagram-tiaeia-568/">Ethernet Cable Diagram - TIA/EIA-568</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-13T16:41:12-04:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://d87studios.com/blog/wp-content/uploads/2011/05/568b-wiring.jpg"><img class="aligncenter size-medium wp-image-110" title="568b wiring diagram" src="http://d87studios.com/blog/wp-content/uploads/2011/05/568b-wiring-185x300.jpg" alt="" width="185" height="300" /></a></p>
-
-<p>&nbsp;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -736,6 +744,10 @@ C:Documents and Settings%USER_NAME%Local SettingsTemporary Internet FilesOLK# (w
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/24/migrating-from-wordpress-to-octopress/">Migrating From WordPress to Octopress</a>
       </li>
     
@@ -749,10 +761,6 @@ C:Documents and Settings%USER_NAME%Local SettingsTemporary Internet FilesOLK# (w
     
       <li class="post">
         <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
       </li>
     
   </ul>

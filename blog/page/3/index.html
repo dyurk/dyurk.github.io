@@ -9,7 +9,7 @@
   <meta name="author" content="David Yurkiewicz">
 
   
-  <meta name="description" content="After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June &hellip;">
+  <meta name="description" content="If you are looking to chmod directories and files separately, the find command can be of great help. Take a look at these examples: For Directories: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +88,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/10/chmod-directories-only-or-files/">Chmod Directories and Files Separately</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T01:28:42-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
+
+<p>For Directories:</p>
+
+<pre lang="shell" prompt="$">find . -type d -exec chmod -v 775 {} \;</pre>
+
+
+<p>For Files:</p>
+
+<pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -607,47 +653,6 @@ net-snmp-utils-x.x.x</pre>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/02/make-command-not-found-in-centos/">Make Command Not Found in CentOS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-02T14:45:43-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are getting this error, you will need to install the gcc automake. Type the following command:</p>
-
-<pre>yum -y install gcc automake autoconf libtool make</pre>
-
-
-<p>That&rsquo;s it!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -671,6 +676,10 @@ net-snmp-utils-x.x.x</pre>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/12/24/migrating-from-wordpress-to-octopress/">Migrating From WordPress to Octopress</a>
       </li>
     
@@ -684,10 +693,6 @@ net-snmp-utils-x.x.x</pre>
     
       <li class="post">
         <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/">ERROR 2006 (HY000) MySQL Server Has Gone Away</a>
       </li>
     
   </ul>
