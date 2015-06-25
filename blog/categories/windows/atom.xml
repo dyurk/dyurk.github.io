@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Windows | DYURK | David Yurkiewicz]]></title>
+  <title><![CDATA[Category: Windows | DYURK]]></title>
   <link href="http://www.dyurk.com/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2015-02-16T18:25:36-05:00</updated>
+  <updated>2015-06-24T22:14:52-04:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
-    <name><![CDATA[David Yurkiewicz]]></name>
+    <name><![CDATA[DYURK]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[WUSB54G Windows 7 64-bit Driver Workaround]]></title>
+    <title type="html"><![CDATA[WUSB54G Windows 7 64-bit Driver workaround]]></title>
     <link href="http://www.dyurk.com/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/"/>
     <updated>2012-05-02T00:15:41-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround</id>
@@ -70,7 +70,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Safely Remove Archived Updates/hotfixes From Windows Server 2008 & Windows 7]]></title>
+    <title type="html"><![CDATA[Safely remove archived updates/hotfixes from Windows Server 2008 & Windows 7]]></title>
     <link href="http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7/"/>
     <updated>2012-03-07T14:02:13-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/03/07/remove-archived-updates-server-2008-7</id>
@@ -97,7 +97,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
+    <title type="html"><![CDATA[Reset the admin password for Symantec Endpoint Protection Manager]]></title>
     <link href="http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>
@@ -123,7 +123,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Upgrading Domain Controllers From Windows Server 2003 to 2008]]></title>
+    <title type="html"><![CDATA[Upgrading Domain Controllers from Windows Server 2003 to 2008]]></title>
     <link href="http://www.dyurk.com/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008/"/>
     <updated>2012-03-04T13:56:08-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/03/04/upgrading-domain-controllers-from-windows-server-2003-to-2008</id>

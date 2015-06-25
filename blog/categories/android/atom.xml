@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Android | DYURK | David Yurkiewicz]]></title>
+  <title><![CDATA[Category: Android | DYURK]]></title>
   <link href="http://www.dyurk.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2015-02-16T18:25:36-05:00</updated>
+  <updated>2015-06-24T22:14:52-04:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
-    <name><![CDATA[David Yurkiewicz]]></name>
+    <name><![CDATA[DYURK]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Wipe Dalvik Cache in Terminal, Andriod.]]></title>
+    <title type="html"><![CDATA[Wipe dalvik cache in Terminal, Andriod.]]></title>
     <link href="http://www.dyurk.com/blog/2011/05/13/wipe-dalvik-cache-in-terminal-andriod/"/>
     <updated>2011-05-13T16:33:54-04:00</updated>
     <id>http://www.dyurk.com/blog/2011/05/13/wipe-dalvik-cache-in-terminal-andriod</id>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Uncategorized | DYURK | David Yurkiewicz]]></title>
+  <title><![CDATA[Category: Uncategorized | DYURK]]></title>
   <link href="http://www.dyurk.com/blog/categories/uncategorized/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2015-02-16T18:25:36-05:00</updated>
+  <updated>2015-06-24T22:14:52-04:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
-    <name><![CDATA[David Yurkiewicz]]></name>
+    <name><![CDATA[DYURK]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
+    <title type="html"><![CDATA[git 1.8.x on CentOS]]></title>
     <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
@@ -37,7 +37,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Su Apache: "This Account Is Currently Not Available"]]></title>
+    <title type="html"><![CDATA[su apache: "This account is currently not available"]]></title>
     <link href="http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available/"/>
     <updated>2012-09-11T16:04:27-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available</id>
@@ -59,7 +59,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Chmod Directories and Files Separately]]></title>
+    <title type="html"><![CDATA[chmod directories and files separately]]></title>
     <link href="http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files/"/>
     <updated>2012-07-10T01:28:42-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/07/10/chmod-directories-only-or-files</id>
@@ -78,7 +78,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Ubuntu Apps Open Folders Instead of Documents Fix]]></title>
+    <title type="html"><![CDATA[Ubuntu apps open folders instead of documents fix]]></title>
     <link href="http://www.dyurk.com/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/"/>
     <updated>2012-06-22T17:10:14-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix</id>
@@ -90,7 +90,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Reset the Admin Password for Symantec Endpoint Protection Manager]]></title>
+    <title type="html"><![CDATA[Reset the admin password for Symantec Endpoint Protection Manager]]></title>
     <link href="http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager/"/>
     <updated>2012-03-06T13:22:07-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/03/06/reset-the-admin-password-for-symantec-endpoint-protection-manager</id>

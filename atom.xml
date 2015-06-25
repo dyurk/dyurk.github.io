@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[DYURK | David Yurkiewicz]]></title>
+  <title><![CDATA[DYURK]]></title>
   <link href="http://www.dyurk.com/atom.xml" rel="self"/>
   <link href="http://www.dyurk.com/"/>
-  <updated>2015-02-16T18:25:36-05:00</updated>
+  <updated>2015-06-24T22:14:52-04:00</updated>
   <id>http://www.dyurk.com/</id>
   <author>
-    <name><![CDATA[David Yurkiewicz]]></name>
+    <name><![CDATA[DYURK]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[splogTASH - SPL to Lucene Translator]]></title>
+    <title type="html"><![CDATA[splogTASH - SPL to Lucene translator]]></title>
     <link href="http://www.dyurk.com/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/"/>
     <updated>2015-02-08T12:59:41-05:00</updated>
     <id>http://www.dyurk.com/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator</id>
@@ -164,7 +164,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Migrating From WordPress to Octopress]]></title>
+    <title type="html"><![CDATA[Migrating from WordPress to Octopress]]></title>
     <link href="http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress/"/>
     <updated>2013-12-24T22:45:54-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/12/24/migrating-from-wordpress-to-octopress</id>
@@ -536,7 +536,7 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL Server Has Gone Away]]></title>
+    <title type="html"><![CDATA[ERROR 2006 (HY000) MySQL server has gone away]]></title>
     <link href="http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away/"/>
     <updated>2013-02-20T22:08:22-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/02/20/error-2006-hy000-mysql-server-has-gone-away</id>
@@ -579,7 +579,7 @@ Caused by: net.sf.hibernate.PropertyValueException: not-null property references
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Confluence Backup Errors]]></title>
+    <title type="html"><![CDATA[Confluence backup errors]]></title>
     <link href="http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors/"/>
     <updated>2013-02-20T15:17:32-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/02/20/confluence-backup-errors</id>
@@ -598,7 +598,7 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Git 1.8.x on CentOS]]></title>
+    <title type="html"><![CDATA[git 1.8.x on CentOS]]></title>
     <link href="http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos/"/>
     <updated>2013-02-08T17:16:13-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/02/08/git-1-8-x-on-centos</id>
@@ -621,7 +621,7 @@ com.atlassian.confluence.importexport.ImportExportException: Couldn't backup dat
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Configuring Memcached]]></title>
+    <title type="html"><![CDATA[Configuring memcached ]]></title>
     <link href="http://www.dyurk.com/blog/2013/01/11/configuring-memcached/"/>
     <updated>2013-01-11T16:45:26-05:00</updated>
     <id>http://www.dyurk.com/blog/2013/01/11/configuring-memcached</id>
@@ -650,7 +650,7 @@ OPTIONS=""</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[SVN Cat Error: "File Not Found". Gives Wrong Revision]]></title>
+    <title type="html"><![CDATA[SVN cat error: "File not found". Gives wrong revision]]></title>
     <link href="http://www.dyurk.com/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision/"/>
     <updated>2012-12-06T02:47:02-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/12/06/svn-cat-error-file-not-found-gives-wrong-revision</id>
@@ -663,7 +663,7 @@ OPTIONS=""</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[JIRA V5 SVN Commit Tab Error]]></title>
+    <title type="html"><![CDATA[JIRA v5 SVN commit tab error]]></title>
     <link href="http://www.dyurk.com/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel/"/>
     <updated>2012-11-19T18:09:49-05:00</updated>
     <id>http://www.dyurk.com/blog/2012/11/19/jira-v5-svn-commit-tab-error-com-atlassian-jira-plugin-ext-subversionsubversion-commits-tabpanel</id>
@@ -685,7 +685,7 @@ OPTIONS=""</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Flush Memcached]]></title>
+    <title type="html"><![CDATA[Flush Memcached ]]></title>
     <link href="http://www.dyurk.com/blog/2012/10/17/flush-memcached/"/>
     <updated>2012-10-17T22:50:28-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/10/17/flush-memcached</id>
@@ -695,7 +695,7 @@ OPTIONS=""</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Restored a Cleared Git Stash]]></title>
+    <title type="html"><![CDATA[Restored a cleared git stash]]></title>
     <link href="http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash/"/>
     <updated>2012-10-05T14:33:35-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/10/05/restored-a-cleared-git-stash</id>
@@ -718,7 +718,7 @@ dangling commit e3b3b973asdasdasdasdasd7cqweqwe35f6d34e</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Su Apache: "This Account Is Currently Not Available"]]></title>
+    <title type="html"><![CDATA[su apache: "This account is currently not available"]]></title>
     <link href="http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available/"/>
     <updated>2012-09-11T16:04:27-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/09/11/this-account-is-currently-not-available</id>
@@ -740,7 +740,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[SVN Backup & Migration]]></title>
+    <title type="html"><![CDATA[SVN Backup & Migration ]]></title>
     <link href="http://www.dyurk.com/blog/2012/08/23/svn-backup-migration/"/>
     <updated>2012-08-23T16:00:34-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/08/23/svn-backup-migration</id>
@@ -786,7 +786,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Examples of Lftp]]></title>
+    <title type="html"><![CDATA[Examples of lftp]]></title>
     <link href="http://www.dyurk.com/blog/2012/08/09/examples-of-lftp/"/>
     <updated>2012-08-09T13:14:25-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/08/09/examples-of-lftp</id>
@@ -803,7 +803,7 @@ Shell changed.</pre>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Puppet: Adding a Package]]></title>
+    <title type="html"><![CDATA[Puppet: Adding a Package ]]></title>
     <link href="http://www.dyurk.com/blog/2012/08/09/puppet-adding-a-package/"/>
     <updated>2012-08-09T13:04:08-04:00</updated>
     <id>http://www.dyurk.com/blog/2012/08/09/puppet-adding-a-package</id>

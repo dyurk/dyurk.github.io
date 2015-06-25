@@ -1,123 +1,92 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>DYURK | David Yurkiewicz</title>
-  <meta name="author" content="David Yurkiewicz">
+	<meta charset="utf-8">
+	<title>DYURK</title>
+	<meta name="author" content="DYURK">
 
-  
-  <meta name="description" content="If you are looking to chmod directories and files separately, the find command can be of great help. Take a look at these examples: For Directories: &hellip;">
-  
+	
+	<meta name="description" content="If you are looking to chmod directories and files separately, the find command can be of great help. Take a look at these examples: For Directories &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://www.dyurk.com/blog/page/3">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="DYURK | David Yurkiewicz" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-46694120-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
+	<link href="/atom.xml" rel="alternate" title="DYURK" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">DYURK | David Yurkiewicz</a></h1>
-  
-    <h2>A blog about WebOps, Sysadmin and Technology.</h2>
-  
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
-    ga('create', 'UA-46694120-1', 'dyurk.com');
-    ga('send', 'pageview');
-  
-  </script>
-</hgroup>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">DYURK</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://encrypted.google.com/search?hl=en&q=" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:www.dyurk.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+		<a class="github" href="https://github.com/dyurk" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://encrypted.google.com/search?hl=en&q=" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:www.dyurk.com">
+	</form>
+</nav>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:www.dyurk.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about_me">About Me</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/10/chmod-directories-only-or-files/">Chmod Directories and Files Separately</a></h1>
-    
-    
-      <p class="meta">
-        
+	
+		
+	
+	<div id="content" class="inner">
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-10T01:28:42-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/07/10/chmod-directories-only-or-files/">
+		
+			Chmod Directories and Files Separately</a>
+	</h2>
+	<div class="entry-content">
+		<p>If you are looking to chmod directories and files separately, the <em>find</em> command can be of great help. Take a look at these examples:</p>
 
 <p>For Directories:</p>
 
@@ -128,42 +97,40 @@
 
 <pre lang="shell" prompt="$">find . -type f -exec chmod -v 664 {} \;</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/">MySQL High Load / Other Issues - Leap Second Bug</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>, <a class='category' href='/blog/categories/uncategorized/'>Uncategorized</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-07-03T01:28:25-04:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/07/03/mysql-high-load-other-issues-leap-second-bug/">
+		
+			MySQL High Load / Other Issues - Leap Second Bug</a>
+	</h2>
+	<div class="entry-content">
+		<p>After struggling with a sever that was acting up, i did some investigating and found it to be related to a recent leap second that was added on June 30th. On Saturday midnight Greenwich Mean Time (GMT), an extra second was added to the Universal Coordinated Time (UTC). According to some news reports the Linux kernel has a bug in how it handles leap seconds.</p>
 
 <p>The fix was simple:</p>
 
@@ -171,81 +138,77 @@
 <br>date -s "`date`"
 <br>service ntpd start</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/">Ubuntu Apps Open Folders Instead of Documents Fix</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-06-22T17:10:14-04:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently after trying out Xfce I started to have issues with one of my go-to apps, Gnome Do. It would only open the directory of the file that i was trying to open. This also happen with Chrome, were downloaded files would not open, only their directory. The issue seems to be releated to some of the utilities that come with Xfec. This should do it:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/06/22/ubuntu-apps-open-folders-instead-of-documents-fix/">
+		
+			Ubuntu Apps Open Folders Instead of Documents Fix</a>
+	</h2>
+	<div class="entry-content">
+		<p>Recently after trying out Xfce I started to have issues with one of my go-to apps, Gnome Do. It would only open the directory of the file that i was trying to open. This also happen with Chrome, were downloaded files would not open, only their directory. The issue seems to be releated to some of the utilities that come with Xfec. This should do it:</p>
 
 <pre lang="shell" prompt="$">sudo apt-get remove exo-utils</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/19/mysql-add-user-privileges/">MySQL: Add User + Privileges</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>, <a class='category' href='/blog/categories/uncategorized/'>Uncategorized</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-06-19T01:24:41-04:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Let&rsquo;s say we want to add a new user &ldquo;Erick Broski&rdquo; with SELECT privileges on database &ldquo;userlistdb&rdquo;.</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/06/19/mysql-add-user-privileges/">
+		
+			MySQL: Add User + Privileges</a>
+	</h2>
+	<div class="entry-content">
+		<p>Let&rsquo;s say we want to add a new user &ldquo;Erick Broski&rdquo; with SELECT privileges on database &ldquo;userlistdb&rdquo;.</p>
 
 <pre>mysql&gt; grant SELECT on userlistdb.* to 'erick.broski'@'localhost';</pre>
 
@@ -273,42 +236,40 @@
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/19/bash-shell-exit-status/">Bash Shell Exit Status</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-06-19T00:57:41-04:00" pubdate data-updated="true">Jun 19<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Exit status codes are helpful when creating shell scripts with IF statements. They are also helpful when you are trying to troubleshoot the outcome of a command. You can use &ldquo;<em>echo</em> <em>$?&rdquo;</em> to find out the exit status. In the terminal exit codes are not displayed on the screen by default, we have to echo them. Here are a few examples:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/06/19/bash-shell-exit-status/">
+		
+			Bash Shell Exit Status</a>
+	</h2>
+	<div class="entry-content">
+		<p>Exit status codes are helpful when creating shell scripts with IF statements. They are also helpful when you are trying to troubleshoot the outcome of a command. You can use &ldquo;<em>echo</em> <em>$?&rdquo;</em> to find out the exit status. In the terminal exit codes are not displayed on the screen by default, we have to echo them. Here are a few examples:</p>
 
 <pre lang="shell" prompt="$"> grep "asda" test.log
 </pre>
@@ -322,42 +283,40 @@
 
 
 <p>In this case we get a &ldquo;1&rdquo;  which is a failure. &ldquo;0&rdquo; = Success, &ldquo;2&rdquo; = Incorrect Usage, &ldquo;126&rdquo; = Not Executable, &#8221;127&#8221; = Command Not Found.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/14/history-command-timestam/">History Command With Date and Timestamp</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-06-14T00:38:25-04:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can get a more detailed display of your bash history by including the date and timestamps. This can be done by defining an environmental variable.</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/06/14/history-command-timestam/">
+		
+			History Command With Date and Timestamp</a>
+	</h2>
+	<div class="entry-content">
+		<p>You can get a more detailed display of your bash history by including the date and timestamps. This can be done by defining an environmental variable.</p>
 
 <pre lang="shell" prompt="$">HISTTIMEFORMAT="%d/%m/%y %T"</pre>
 
@@ -370,42 +329,40 @@
  966 13/06/12 20:14:53 git pull
  967 13/06/12 20:15:05 git push</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/06/07/delete-a-single-iptables/">Delete a Single Iptables Rule</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-06-07T13:00:44-04:00" pubdate data-updated="true">Jun 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will list all of your rules, plus their chain name and number:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/06/07/delete-a-single-iptables/">
+		
+			Delete a Single Iptables Rule</a>
+	</h2>
+	<div class="entry-content">
+		<p>This will list all of your rules, plus their chain name and number:</p>
 
 <pre lang="shell" prompt="$">iptables -vnL --line-numbers</pre>
 
@@ -433,42 +390,40 @@
 13 0 0 ACCEPT udp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW udp dpt:138 
 14 4 240 ACCEPT tcp -- * * 0.0.0.0/0 0.0.0.0/0 state NEW tcp dpt:22</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/">WUSB54G Windows 7 64-bit Driver Workaround</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:15:41-04:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For some reason there are no 64bit drivers for the Linksys Wireless-G USB Network adapter. Well, there is a work around.</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/02/wusb54g-windows-7-64-bit-driver-workaround/">
+		
+			WUSB54G Windows 7 64-bit Driver Workaround</a>
+	</h2>
+	<div class="entry-content">
+		<p>For some reason there are no 64bit drivers for the Linksys Wireless-G USB Network adapter. Well, there is a work around.</p>
 
 <p>Download the following driver:</p>
 
@@ -502,42 +457,40 @@
 <p><strong>Click  Next, and Finish. The driver should now be installed on your system.</strong></p>
 
 <p><em>Or you can just install Ubuntu Linux&hellip;  :-D </em></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/04/adding-new-users-in-nagios/">Adding New Users in Nagios</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/technology/'>Technology</a>, <a class='category' href='/blog/categories/windows/'>Windows</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-04-04T18:21:33-04:00" pubdate data-updated="true">Apr 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To add new users for the web interface of Nagios you will need to run the following command:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/04/04/adding-new-users-in-nagios/">
+		
+			Adding New Users in Nagios</a>
+	</h2>
+	<div class="entry-content">
+		<p>To add new users for the web interface of Nagios you will need to run the following command:</p>
 
 <pre># htpasswd /usr/local/nagios/etc/htpasswd.users username01</pre>
 
@@ -562,42 +515,40 @@
 
 
 <p>Careful when editing the cgi config file. For security reasons you might not want to give full access to every user.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/03/nagios-error-return-code-of-127-is-out-of-bounds-plugin-may-be-missing/">Nagios Error: “Return Code of 127 Is Out of Bounds – Plugin May Be Missing”</a></h1>
-    
-    
-      <p class="meta">
-        
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
 
 
+</div>
+	
+</div>
+</article>
 
 
-
-
-
-
-  
-
-
-<time datetime="2012-04-03T13:12:04-04:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are monitoring network devices in Nagios and you get the following error:</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/04/03/nagios-error-return-code-of-127-is-out-of-bounds-plugin-may-be-missing/">
+		
+			Nagios Error: “Return Code of 127 Is Out of Bounds – Plugin May Be Missing”</a>
+	</h2>
+	<div class="entry-content">
+		<p>If you are monitoring network devices in Nagios and you get the following error:</p>
 
 <address><strong> “Return code of 127 is out of bounds – plugin may be missing” </strong></address>
 
@@ -646,137 +597,55 @@ net-snmp-utils-x.x.x</pre>
 
 <pre> service nagios start</pre>
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
 </div>
-  
-  
+	<div class="tags">
 
 
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/4/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
-    
-  </div>
+	<a class='category' href='/blog/categories/linux/'>Linux</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+
+
 </div>
-<aside class="sidebar">
-  
-    <section>
-	<img src="/images/david_yurkiewicz.jpeg">
-	<br>
-	<center><strong>David Yurkiewicz</strong></center>
-</section>
+	
+</div>
+</article>
 
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+<nav id="pagenavi">
     
-      <li class="post">
-        <a href="/blog/2015/02/08/splogtash-a-simple-spl-search-processing-language-to-lucene-translator/">splogTASH - SPL to Lucene Translator</a>
-      </li>
+        
+            <a href="/posts//blog/page/2/" class="prev">Prev</a>
+        
     
-      <li class="post">
-        <a href="/blog/2013/12/24/migrating-from-wordpress-to-octopress/">Migrating From WordPress to Octopress</a>
-      </li>
     
-      <li class="post">
-        <a href="/blog/2013/03/26/confluence-xml-import-issues/">Confluence XML Import Issues</a>
-      </li>
+        <a href="/posts//blog/page/4/" class="next">Next</a>
     
-      <li class="post">
-        <a href="/blog/2013/03/12/apache-proxy-example/">Apache Proxy Example</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/06/cisco-catalyst-2960-notes/">Cisco Catalyst 2960 - Notes</a>
-      </li>
-    
-  </ul>
-</section>
-<section>
-	<a class="twitter-timeline" href="https://twitter.com/d87tech" data-widget-id="414557421197983744">Tweets by @d87tech</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
 
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/dyurk">@dyurk</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'dyurk',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - David Yurkiewicz -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+    DYURK
 
 </footer>
-  
-
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-      var disqus_shortname = 'dyurk';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
