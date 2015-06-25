@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: JIRA v5 SVN commit tab error
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 574
 wordpress_url: http://d87studios.com/blog/?p=574
 date: 2012-11-19 18:09:49.000000000 -05:00

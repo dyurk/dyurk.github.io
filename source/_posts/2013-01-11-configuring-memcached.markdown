@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'Configuring memcached '
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 610
 wordpress_url: http://d87studios.com/blog/?p=610
 date: 2013-01-11 16:45:26.000000000 -05:00

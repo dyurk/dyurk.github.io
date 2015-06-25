@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: chmod directories and files separately
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 522
 wordpress_url: http://d87studios.com/blog/?p=522
 date: 2012-07-10 01:28:42.000000000 -04:00

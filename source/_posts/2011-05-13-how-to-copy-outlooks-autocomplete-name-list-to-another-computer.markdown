@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: How to copy Outlook's Autocomplete name list to another computer.
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 17
 wordpress_url: http://d87studios.com/blog/?p=17
 date: 2011-05-13 16:39:42.000000000 -04:00

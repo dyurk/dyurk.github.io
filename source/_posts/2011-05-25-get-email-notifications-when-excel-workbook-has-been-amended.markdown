@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Get Email notifications when Excel workbook has been amended.
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 151
 wordpress_url: http://d87studios.com/blog/?p=151
 date: 2011-05-25 14:23:02.000000000 -04:00

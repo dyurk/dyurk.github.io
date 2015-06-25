@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'Nagios Error: “Return code of 127 is out of bounds – plugin may be missing” '
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 473
 wordpress_url: http://d87studios.com/blog/?p=473
 date: 2012-04-03 13:12:04.000000000 -04:00

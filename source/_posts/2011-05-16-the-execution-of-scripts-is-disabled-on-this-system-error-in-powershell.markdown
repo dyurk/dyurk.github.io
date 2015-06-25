@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: The execution of scripts is disabled on this system; error in PowerShell
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 61
 wordpress_url: http://d87studios.com/blog/?p=61
 date: 2011-05-16 13:58:28.000000000 -04:00

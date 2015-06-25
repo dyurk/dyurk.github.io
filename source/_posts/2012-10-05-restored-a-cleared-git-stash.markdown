@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Restored a cleared git stash
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 568
 wordpress_url: http://d87studios.com/blog/?p=568
 date: 2012-10-05 14:33:35.000000000 -04:00

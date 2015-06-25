@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Remove Product Key in Windows Server 2008
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 413
 wordpress_url: http://d87studios.com/blog/?p=413
 date: 2012-03-03 18:40:40.000000000 -05:00

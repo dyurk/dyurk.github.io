@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'MySQL: The description for Event ID in Source cannot be found.'
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 373
 wordpress_url: http://d87studios.com/blog/?p=373
 date: 2011-10-21 15:37:35.000000000 -04:00

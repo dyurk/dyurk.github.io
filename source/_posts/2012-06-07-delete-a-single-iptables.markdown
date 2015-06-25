@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'Delete a single iptables rule '
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 494
 wordpress_url: http://d87studios.com/blog/?p=494
 date: 2012-06-07 13:00:44.000000000 -04:00

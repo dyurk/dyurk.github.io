@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: history command with date and timestamp
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 497
 wordpress_url: http://d87studios.com/blog/?p=497
 date: 2012-06-14 00:38:25.000000000 -04:00

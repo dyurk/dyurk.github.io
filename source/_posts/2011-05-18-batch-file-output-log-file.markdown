@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Batch file output to Log file
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 83
 wordpress_url: http://d87studios.com/blog/?p=83
 date: 2011-05-18 15:24:55.000000000 -04:00

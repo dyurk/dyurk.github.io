@@ -4,9 +4,9 @@ status: publish
 published: true
 title: Safely remove archived updates/hotfixes from Windows Server 2008 & Windows
   7
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 433
 wordpress_url: http://d87studios.com/blog/?p=433
 date: 2012-03-07 14:02:13.000000000 -05:00

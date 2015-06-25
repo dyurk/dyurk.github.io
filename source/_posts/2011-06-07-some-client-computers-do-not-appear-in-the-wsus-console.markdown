@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Some Client computers do not appear in the WSUS console
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 206
 wordpress_url: http://d87studios.com/blog/?p=206
 date: 2011-06-07 20:33:03.000000000 -04:00

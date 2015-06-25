@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Confluence XML Import Issues
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 682
 wordpress_url: http://d87studios.com/blog/?p=682
 date: 2013-03-26 13:35:01.000000000 -04:00

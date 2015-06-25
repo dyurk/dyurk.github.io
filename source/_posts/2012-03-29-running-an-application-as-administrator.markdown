@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Running an Application as Administrator
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 466
 wordpress_url: http://d87studios.com/blog/?p=466
 date: 2012-03-29 12:27:34.000000000 -04:00

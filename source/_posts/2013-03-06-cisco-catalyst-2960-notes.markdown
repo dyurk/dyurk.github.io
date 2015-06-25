@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Cisco Catalyst 2960 - Notes
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 excerpt: ! "<h2>VLAN</h2>\r\n<h3>Creating VLANs</h3>\r\nShow all VLANs on switch\r\n<pre>&gt;
   sh vlan</pre>\r\nNow, Let's begin. Enter global configuration mode\r\n<pre># config
   t</pre>\r\nEnter a VLAN ID\r\n<pre># vlan 5</pre>\r\nProvide a name for the VLAN\r\n<pre>#

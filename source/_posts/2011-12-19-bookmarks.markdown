@@ -3,9 +3,9 @@ layout: page
 status: publish
 published: true
 title: Bookmarks
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 392
 wordpress_url: http://d87studios.com/blog/?page_id=392
 date: 2011-12-19 15:56:57.000000000 -05:00

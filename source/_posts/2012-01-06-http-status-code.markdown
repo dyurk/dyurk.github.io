@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: HTTP Status Code
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 653
 wordpress_url: http://d87studios.com/blog/?p=653
 date: 2012-01-06 17:21:09.000000000 -05:00

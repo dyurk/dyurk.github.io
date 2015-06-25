@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: MySQL High Load / Other Issues - Leap second bug
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 519
 wordpress_url: http://d87studios.com/blog/?p=519
 date: 2012-07-03 01:28:25.000000000 -04:00

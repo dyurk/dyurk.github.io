@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Temporarily Disable Puppet
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 642
 wordpress_url: http://d87studios.com/blog/?p=642
 date: 2013-02-20 21:26:26.000000000 -05:00

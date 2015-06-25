@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Joomla Upgrade. jUpgrade Stuck
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 187
 wordpress_url: http://d87studios.com/blog/?p=187
 date: 2011-06-02 14:42:14.000000000 -04:00

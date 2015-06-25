@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Upgrading Domain Controllers from Windows Server 2003 to 2008
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 420
 wordpress_url: http://d87studios.com/blog/?p=420
 date: 2012-03-04 13:56:08.000000000 -05:00

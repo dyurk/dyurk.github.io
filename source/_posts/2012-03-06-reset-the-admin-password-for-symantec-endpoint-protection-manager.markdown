@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Reset the admin password for Symantec Endpoint Protection Manager
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 424
 wordpress_url: http://d87studios.com/blog/?p=424
 date: 2012-03-06 13:22:07.000000000 -05:00

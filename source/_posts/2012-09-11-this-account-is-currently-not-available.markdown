@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'su apache: "This account is currently not available"'
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 561
 wordpress_url: http://d87studios.com/blog/?p=561
 date: 2012-09-11 16:04:27.000000000 -04:00

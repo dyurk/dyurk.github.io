@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Concatenate CAT
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 542
 wordpress_url: http://d87studios.com/blog/?p=542
 date: 2012-07-30 15:30:07.000000000 -04:00

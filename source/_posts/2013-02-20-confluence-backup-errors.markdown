@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Confluence backup errors
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 633
 wordpress_url: http://d87studios.com/blog/?p=633
 date: 2013-02-20 15:17:32.000000000 -05:00

@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Netgear WG302 Firmware upgrade via Telnet
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 13
 wordpress_url: http://d87studios.com/blog/?p=13
 date: 2011-05-13 16:37:34.000000000 -04:00

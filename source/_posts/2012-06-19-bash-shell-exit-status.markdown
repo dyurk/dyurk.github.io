@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Bash Shell Exit Status
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 503
 wordpress_url: http://d87studios.com/blog/?p=503
 date: 2012-06-19 00:57:41.000000000 -04:00

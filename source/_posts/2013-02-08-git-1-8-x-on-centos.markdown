@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: git 1.8.x on CentOS
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 621
 wordpress_url: http://d87studios.com/blog/?p=621
 date: 2013-02-08 17:16:13.000000000 -05:00

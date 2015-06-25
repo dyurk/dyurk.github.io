@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'MySQL: Add User + Privileges '
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 507
 wordpress_url: http://d87studios.com/blog/?p=507
 date: 2012-06-19 01:24:41.000000000 -04:00

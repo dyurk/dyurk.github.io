@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Back Up / Restore Outlook Autocomplete (Recently Typed Emails)
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 27
 wordpress_url: http://d87studios.com/blog/?p=27
 date: 2011-05-13 16:43:49.000000000 -04:00

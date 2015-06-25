@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: In Linux; Run Application under the Terminal at start up.
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 23
 wordpress_url: http://d87studios.com/blog/?p=23
 date: 2011-05-13 16:42:07.000000000 -04:00

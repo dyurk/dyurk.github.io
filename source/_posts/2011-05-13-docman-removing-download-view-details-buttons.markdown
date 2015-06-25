@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: DOCMan; Removing "Download", "View" & "Details" Buttons
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 5
 wordpress_url: http://d87studios.com/blog/?p=5
 date: 2011-05-13 16:32:24.000000000 -04:00

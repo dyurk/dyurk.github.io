@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Ubuntu apps open folders instead of documents fix
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 514
 wordpress_url: http://d87studios.com/blog/?p=514
 date: 2012-06-22 17:10:14.000000000 -04:00

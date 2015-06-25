@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Adding New Users in Nagios
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 482
 wordpress_url: http://d87studios.com/blog/?p=482
 date: 2012-04-04 18:21:33.000000000 -04:00

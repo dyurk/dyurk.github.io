@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ERROR 2006 (HY000) MySQL server has gone away
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 645
 wordpress_url: http://d87studios.com/blog/?p=645
 date: 2013-02-20 22:08:22.000000000 -05:00

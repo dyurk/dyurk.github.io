@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'VIM: Find & Replace'
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 550
 wordpress_url: http://d87studios.com/blog/?p=550
 date: 2012-08-15 20:16:02.000000000 -04:00

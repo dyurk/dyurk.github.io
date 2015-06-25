@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! 'SVN cat error: "File not found". Gives wrong revision'
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 564
 wordpress_url: http://d87studios.com/blog/?p=564
 date: 2012-12-06 02:47:02.000000000 -05:00

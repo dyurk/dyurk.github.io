@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Remotely view Internet browsing history
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 322
 wordpress_url: http://d87studios.com/blog/?p=322
 date: 2011-08-02 13:42:18.000000000 -04:00

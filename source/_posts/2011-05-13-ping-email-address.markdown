@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: ! '"PING" Email Address'
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 19
 wordpress_url: http://d87studios.com/blog/?p=19
 date: 2011-05-13 16:40:21.000000000 -04:00

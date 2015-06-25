@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: WUSB54G Windows 7 64-bit Driver workaround
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 484
 wordpress_url: http://d87studios.com/blog/?p=484
 date: 2012-05-02 00:15:41.000000000 -04:00

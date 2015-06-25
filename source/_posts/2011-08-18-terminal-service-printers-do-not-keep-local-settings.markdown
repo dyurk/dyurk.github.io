@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Terminal Service Printers do not keep local settings.
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 362
 wordpress_url: http://d87studios.com/blog/?p=362
 date: 2011-08-18 16:07:15.000000000 -04:00

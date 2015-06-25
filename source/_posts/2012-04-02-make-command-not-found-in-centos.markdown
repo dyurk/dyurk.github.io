@@ -3,9 +3,9 @@ layout: post
 status: publish
 published: true
 title: Make Command Not Found in CentOS
-author: David Yurkiewicz
+author: DYURK
 author_login: admin
-author_email: david.yurkiewicz@gmail.com
+author_email: null@dev.com
 wordpress_id: 470
 wordpress_url: http://d87studios.com/blog/?p=470
 date: 2012-04-02 14:45:43.000000000 -04:00
